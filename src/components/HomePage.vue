@@ -1,6 +1,11 @@
 <template>
   <nav>
-    <img src="" alt="">
+    <ul>
+      <a href="">
+        <img src="" alt="">
+        shania.shn
+      </a>
+    </ul>
     <ul>
       <li>projects</li>
       <li>about</li>
