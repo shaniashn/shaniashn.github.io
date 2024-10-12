@@ -19,3 +19,23 @@ export default {
   name: 'HomePage'
 }
 </script>
+
+<style>
+  nav ul a {
+    text-decoration: none;
+  }
+
+  nav, nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  nav ul:last-child {
+    width: 20%;
+  }
+
+  nav ul li {
+    list-style: none;
+  }
+
+</style>
