@@ -23,15 +23,13 @@
     </div>
   </div>
   <div class="socials">
-    <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-    <a href=""><i class="fa-brands fa-github"></i></a>
-    <a href=""><i class="fa-brands fa-dribbble"></i></a>
-    <a href=""><i class="fa-regular fa-file"></i></a>
+    <font-awesome-icon icon="fa-brands fa-linkedin-in" />
   </div>
   </section>
 </template>
 
 <script>
+
 export default {
   name: 'HomePage'
 }
@@ -65,7 +63,6 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background-color: aquamarine;
   }
 
   .welcoming h1{
