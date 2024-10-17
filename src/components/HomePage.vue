@@ -21,6 +21,8 @@
     </div>
     <div class="welcome-img">
       <!-- <HeroImage /> -->
+       <img src="../assets/fullbodyfull.svg" alt="person waving" >
+       <!-- <img src="../assets/logo.png" alt=""> -->
     </div>
   </div>
   <div class="socials">
@@ -33,7 +35,7 @@
 </template>
 
 <script>
-// import HeroImage from '../assets/fullbodyfull.svg';
+// import HeroImage from '../assets/l';
 
 export default {
   name: 'HomePage',
@@ -83,5 +85,9 @@ export default {
   .welcoming h5 {
     font-size: xx-large;
     /* line-height: 0%; */
+  }
+
+  .welcome-img {
+    width: 25%;
   }
 </style>
