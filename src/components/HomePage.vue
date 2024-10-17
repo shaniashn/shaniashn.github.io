@@ -20,18 +20,26 @@
       <h5>an iOS Developer and who does design.</h5>
     </div>
     <div class="welcome-img">
+      <!-- <HeroImage /> -->
     </div>
   </div>
   <div class="socials">
     <font-awesome-icon icon="fa-brands fa-linkedin-in" />
+    <font-awesome-icon icon="fa-brands fa-github" />
+    <font-awesome-icon icon="fa-brands fa-dribbble" />
+    <font-awesome-icon icon="fa-regular fa-file" />
   </div>
   </section>
 </template>
 
 <script>
+// import HeroImage from '../assets/fullbodyfull.svg';
 
 export default {
-  name: 'HomePage'
+  name: 'HomePage',
+  components: {
+    // HeroImage
+  }
 }
 </script>
 
