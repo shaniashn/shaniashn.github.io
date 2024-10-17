@@ -2,8 +2,6 @@
 import HomePage from './components/HomePage.vue';
 import { createRouter, createWebHashHistory } from 'vue-router';
 
-
-
 const routes = [ //array of objects
   {
     name: 'HomePage',
