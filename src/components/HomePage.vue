@@ -98,11 +98,12 @@ export default {
     /* background-color: beige; */
     display: flex;
     justify-content: space-between;
+    margin-top: 15%;
   }
 
   .welcome-text .socials a {
     background-color: tomato;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
     border-radius: 50%;
   }
