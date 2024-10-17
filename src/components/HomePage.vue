@@ -15,22 +15,20 @@
   </nav>
   <div class="welcoming">
     <div class="welcome-text">
-      <h1>oh, HI!</h1>
-      <h1>i am Sha Nia Siahaan</h1>
+      <h1>HI, Sha Nia here!</h1>
       <h5>an iOS Developer and who does design.</h5>
+      <div class="socials">
+        <font-awesome-icon icon="fa-brands fa-linkedin-in" />
+        <font-awesome-icon icon="fa-brands fa-github" />
+        <font-awesome-icon icon="fa-brands fa-dribbble" />
+        <font-awesome-icon icon="fa-regular fa-file" />
+      </div>
     </div>
     <div class="welcome-img">
-      <!-- <HeroImage /> -->
-       <img src="../assets/fullbodyfull.svg" alt="person waving" >
-       <!-- <img src="../assets/logo.png" alt=""> -->
+       <img src="../assets/hero-full.svg" alt="person waving" >
     </div>
   </div>
-  <div class="socials">
-    <font-awesome-icon icon="fa-brands fa-linkedin-in" />
-    <font-awesome-icon icon="fa-brands fa-github" />
-    <font-awesome-icon icon="fa-brands fa-dribbble" />
-    <font-awesome-icon icon="fa-regular fa-file" />
-  </div>
+  
   </section>
 </template>
 
@@ -64,25 +62,31 @@ export default {
   }
 
   .welcome {
-    height: 100vh;
+    height: 100%;
   }
 
   .welcoming {
     text-align: left;
-    padding: 100px;
+    margin: 100px 120px 0;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    /* background-color: aqua; */
+    align-items: center;
+    justify-content: space-between;
   }
 
-  .welcoming h1{
-    font-size: 100px;
+  .welcome-text {
     line-height: 0%;
-    /* background-color: bisque; */
-    width: 100%;
+    /* background-color: rgb(144, 198, 28); */
   }
 
-  .welcoming h5 {
+  .welcome-text h1{
+    width: 100%;
+    font-size: 90px;
+    font-weight: 800;
+    /* line-height: 0%; */
+  }
+
+  .welcome-text h5 {
     font-size: xx-large;
     /* line-height: 0%; */
   }
