@@ -18,10 +18,10 @@
       <h1>HI, Sha Nia here!</h1>
       <h5>an iOS Developer and who does design.</h5>
       <div class="socials">
-        <font-awesome-icon icon="fa-brands fa-linkedin-in" />
-        <font-awesome-icon icon="fa-brands fa-github" />
-        <font-awesome-icon icon="fa-brands fa-dribbble" />
-        <font-awesome-icon icon="fa-regular fa-file" />
+        <a href=""><font-awesome-icon icon="fa-brands fa-linkedin-in" size="2x" /></a>
+        <a href=""><font-awesome-icon icon="fa-brands fa-github" size="2x" /></a>
+        <a href=""><font-awesome-icon icon="fa-brands fa-dribbble" size="2x" /></a>
+        <a href=""><font-awesome-icon icon="fa-regular fa-file" size="2x" /></a>
       </div>
     </div>
     <div class="welcome-img">
@@ -83,15 +83,33 @@ export default {
     width: 100%;
     font-size: 90px;
     font-weight: 800;
-    /* line-height: 0%; */
   }
 
   .welcome-text h5 {
     font-size: xx-large;
-    /* line-height: 0%; */
   }
 
   .welcome-img {
     width: 25%;
   }
+  .welcome-text .socials {
+    width: 50%;
+    height: fit-content;
+    /* background-color: beige; */
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .welcome-text .socials a {
+    background-color: tomato;
+    padding: 20px;
+    text-align: center;
+    border-radius: 50%;
+  }
+
+  .welcome .socials svg {
+    width: 25px;
+    height: 25px;
+  }
+  
 </style>
