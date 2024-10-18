@@ -86,7 +86,7 @@ export default {
   }
 
   .welcome-text h5 {
-    font-size: xx-large;
+    font-size: small;
   }
 
   .welcome-img {
