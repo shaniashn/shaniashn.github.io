@@ -49,14 +49,6 @@ export default {
 </script>
 
 <style>
-:root {
-  --primary-color: #FFF8F3;
-  /* --secondary-color: #492229; */
-  --secondary-color: #262524;
-  --tertiary-color: #E6A4B4;
-  --quaternary-color: #E6A4B4;
-}
-
 body {
   margin: 0;
   background-color: var(--primary-color);
@@ -78,7 +70,7 @@ header {
 nav {
   display: flex;
   justify-content: space-around;
-  background-color: rgb(213, 240, 193, 0.5);
+  background-color: var(--lightgreen-color);
   height: 50px;
   width: 100%;
   position: relative;
@@ -89,7 +81,7 @@ nav {
 nav ul li {
   display: flex;
   align-items: center;
-  background-color: #ABD9BB;
+  background-color: var(--green-color);
   position: relative;
   align-self: center;
   padding: 0 15px;
@@ -149,7 +141,7 @@ nav ul:last-child {
 }
 
 .welcome-text h1 span {
-  color: var(--tertiary-color);
+  color: var(--secondary-color);
 }
 
 .welcome-text h5 {
@@ -174,7 +166,7 @@ nav ul:last-child {
   padding: 15px;
   text-align: center;
   border-radius: 50%;
-  color: #FFF8F3;
+  color: var(--primary-color);
 }
 
 .welcome .socials svg {

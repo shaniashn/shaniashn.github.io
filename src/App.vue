@@ -20,6 +20,15 @@ export default {
 </script>
 
 <style>
+
+:root {
+  --primary-color: #FFF8F3;
+  --secondary-color: #262524;
+  --green-color: #ABD9BB;
+  --lightgreen-color: #d5f0c180;
+  --pink-color: #E6A4B4;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
