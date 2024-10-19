@@ -1,18 +1,4 @@
 <template>
-  <header>
-    <nav>
-    <ul>
-      <a href="#home">
-        shania.shn
-      </a>
-    </ul>
-    <ul>
-      <li>projects</li>
-      <li>about</li>
-      <li>resume</li>
-    </ul>
-  </nav>
-  </header>
   <section class="welcome" id="home">
     <div class="welcoming">
       <div class="welcome-text">
@@ -31,94 +17,32 @@
     </div>
   </section>
   <section class="portfolio">
-    <h1>text</h1>
-    <div class="aaaaa"></div>
-    <div class="aaaaa"></div>
+    <PortfolioView />
   </section>
+  <Nav />
 </template>
 
 <script>
-// import HeroImage from '../assets/l';
+import Nav from './NavigationBar.vue';
+import PortfolioView from './PortfolioView.vue';
 
 export default {
   name: 'HomePage',
   components: {
-    // HeroImage
+    Nav,
+    PortfolioView
   }
 }
 </script>
 
 <style>
-body {
-  margin: 0;
-  background-color: var(--primary-color);
-}
-
-ul {
-  margin: 0;
-}
-
-header {
-  backdrop-filter: blur(5px);
-  position: fixed;
-  height: 70px;
-  width: 100%;
-  background-color: rgb(255, 248, 243, 0.5);
-  top: 0;
-}
-
-nav {
-  display: flex;
-  justify-content: space-around;
-  background-color: var(--lightgreen-color);
-  height: 50px;
-  width: 100%;
-  position: relative;
-  top: 20px;
-  backdrop-filter: blur(5px);
-}
-
-nav ul li {
-  display: flex;
-  align-items: center;
-  background-color: var(--green-color);
-  position: relative;
-  align-self: center;
-  padding: 0 15px;
-  height: 100%;
-}
-
-nav ul {
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  height: 100%;
-}
-
-nav ul a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-
-nav ul a,
-nav ul li {
-  font-size: 1.5em;
-  font-weight: 600;
-  color: var(--secondary-color);
-}
-
-nav ul:first-child {
-  left: 10%;
-}
-
-nav ul:last-child {
-  width: 30%;
-  right: 10%;
+Nav {
+  position: sticky;
+  z-index: 10009;
 }
 
 .welcome {
-  height: 100%;
+  height: 100vh;
 }
 
 .welcoming {
@@ -166,7 +90,22 @@ nav ul:last-child {
   padding: 15px;
   text-align: center;
   border-radius: 50%;
-  color: var(--primary-color);
+}
+
+.welcome-text .socials a:nth-child(1) {
+  color: var(--blue-color);
+}
+
+.welcome-text .socials a:nth-child(2) {
+  color: var(--green-color);
+}
+
+.welcome-text .socials a:nth-child(3) {
+  color: var(--pink-color);
+}
+
+.welcome-text .socials a:nth-child(4) {
+  color: var(--lightgreen-color);
 }
 
 .welcome .socials svg {
