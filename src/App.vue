@@ -25,8 +25,15 @@ export default {
   --primary-color: #FFF8F3;
   --secondary-color: #262524;
   --green-color: #ABD9BB;
-  --lightgreen-color: #d5f0c180;
+  --lightgreen-color: #D5F0C1;
   --pink-color: #E6A4B4;
+  --blue-color: #79C4E2;
+  --lightgreen-shade-color: rgb(213, 240, 193, 0.5);
+}
+
+body {
+  margin: 0;
+  background-color: var(--primary-color);
 }
 
 #app {
@@ -34,8 +41,16 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin: 0px;
-  background-color: #FFF8F3;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
 }
 </style>
