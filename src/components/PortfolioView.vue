@@ -15,7 +15,7 @@
       <div class="detail-description">
         <p class="type">{{ porto.type }}</p>
         <p class="title">{{ porto.title }}</p>
-        <p class="description">{{ porto.description}}</p>
+        <p class="description">{{ porto.description }}</p>
         <div class="techused">
           <img src="../assets/techstack/swift.svg" alt="">
         </div>
@@ -71,7 +71,7 @@ export default {
   align-items: center;
   padding: 0 15px;
   height: 100%;
-  
+  font-weight: 500;
 }
 
 .portfolio-bar ul li:hover {
@@ -91,7 +91,6 @@ export default {
 }
 
 .detail-view .detail-image {
-  background-color: aquamarine;
   /* flex-grow: 1; */
   margin-right: 5%;
 }
