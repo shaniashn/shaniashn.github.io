@@ -65,4 +65,51 @@ export default {
   cursor: default;
 }
 
+.detail-view {
+  display: flex;
+  justify-self: space-evenly;
+  align-items: center;
+  /* height: 300px; */
+  /* width: 1000px; */
+  margin: 0 140px;
+  /* background-color: khaki; */
+
+}
+
+.detail-view .detail-image {
+  background-color: aquamarine;
+  /* flex-grow: 1; */
+  margin-right: 5%;
+}
+
+.detail-view .detail-description {
+  /* width: 40%; */
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  /* flex-grow: 3s; */
+}
+
+.detail-view .detail-description .description {
+  /* width: 70%; */
+  /* background-color: cornflowerblue; */
+}
+
+.detail-description p:nth-child(1){
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 0;
+}
+
+.detail-description p:nth-child(2){
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 0;
+}
+
+.detail-description p:nth-child(3){
+  font-size: 1.1em;
+  font-weight: 500;
+
+}
 </style>
