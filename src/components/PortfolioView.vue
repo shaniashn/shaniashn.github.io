@@ -8,16 +8,17 @@
         <li>RIOT</li>
       </ul>
     </div>
-    <div class="detail-view">
+    <div class="detail-view"  v-for="porto in portfolio" :key="porto">
       <div class="detail-image">
         <img src="../assets/rect.svg" alt="">
       </div>
       <div class="detail-description">
-        <p class="type">iOS App</p>
-        <p class="title">RIOT Hybrid Board Game</p>
-        <p class="description">
-          an iOS 4-player game app that leverages NFC technology to enhance interaction between physical game components and electronic devices.
-        </p>
+        <p class="type">{{ porto.type }}</p>
+        <p class="title">{{ porto.title }}</p>
+        <p class="description">{{ porto.description}}</p>
+        <div class="techused">
+          <img src="../assets/techstack/swift.svg" alt="">
+        </div>
       </div>
     </div>
   </section>
@@ -25,7 +26,20 @@
 
 <script>
 export default {
-  name: 'PortfolioView'
+  name: 'PortfolioView',
+  data() {
+    return {
+      portfolio: [
+        {
+          type: "iOS App",
+          title: "RIOT Hybrid Board Game",
+          description: "an iOS 4-player game app that leverages NFC technology to enhance interaction between physical game components and electronic devices.",
+          img: "",
+          techStack: ""
+        },
+      ]
+    }
+  }
 }
 </script>
 
@@ -61,7 +75,7 @@ export default {
 }
 
 .portfolio-bar ul li:hover {
-  background-color: var(--green-color);
+  background-color: var(--pink-color);
   cursor: default;
 }
 
@@ -111,5 +125,9 @@ export default {
   font-size: 1.1em;
   font-weight: 500;
 
+}
+
+.techused img {
+  width: 35pt;
 }
 </style>
