@@ -8,7 +8,8 @@
         <li>RIOT</li>
       </ul>
     </div>
-    <div class="detail-view"  v-for="porto in portfolio" :key="porto">
+    <div class="detail-container">
+      <div class="detail-view"  v-for="porto in portfolio" :key="porto">
       <div class="detail-image">
         <img src="../assets/rect.svg" alt="">
       </div>
@@ -21,6 +22,7 @@
         </div>
       </div>
     </div>
+    </div>
   </section>
 </template>
 
@@ -30,6 +32,13 @@ export default {
   data() {
     return {
       portfolio: [
+        {
+          type: "iOS App",
+          title: "RIOT Hybrid Board Game",
+          description: "an iOS 4-player game app that leverages NFC technology to enhance interaction between physical game components and electronic devices.",
+          img: "",
+          techStack: ""
+        },
         {
           type: "iOS App",
           title: "RIOT Hybrid Board Game",
@@ -79,14 +88,21 @@ export default {
   cursor: default;
 }
 
+.detail-container {
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+}
+
 .detail-view {
   display: flex;
   justify-self: space-evenly;
   align-items: center;
+  width: 100%;
   /* height: 300px; */
   /* width: 1000px; */
-  margin: 0 140px;
-  /* background-color: khaki; */
+  /* margin: 0 140px; */
+  background-color: khaki;
 
 }
 
