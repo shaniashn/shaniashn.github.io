@@ -98,7 +98,7 @@ export default {
   display: flex;
   justify-self: space-evenly;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   /* height: 300px; */
   /* width: 1000px; */
   /* margin: 0 140px; */
@@ -107,7 +107,7 @@ export default {
 }
 
 .detail-view .detail-image {
-  /* flex-grow: 1; */
+  flex-grow: 1;
   margin-right: 5%;
 }
 
