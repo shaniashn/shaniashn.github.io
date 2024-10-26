@@ -2,24 +2,26 @@
   <section class="portfolio">
     <div class="portfolio-bar">
       <ul>
-        <li>Electra</li>
-        <li>GuidEducation</li>
-        <li>Ghone</li>
-        <li>RIOT</li>
+        <li v-for="category in categories" :key="category">{{ category }}</li>
       </ul>
     </div>
     <div class="detail-container">
-      <div class="detail-view"  v-for="porto in portfolio" :key="porto">
+
+       <div class="detail-view"> <!-- v-for="porto in portfolio" :key="porto" -->
       <div class="detail-image">
         <img src="../assets/rect.svg" alt="">
       </div>
       <div class="detail-description">
-        <p class="type">{{ porto.type }}</p>
-        <p class="title">{{ porto.title }}</p>
-        <p class="description">{{ porto.description }}</p>
+        <p class="type">{{ portoType }}</p>
+        <p class="title">{{ portoTitle }}</p>
+        <p class="description">{{ portoDesc }}</p>
         <div class="techused">
           <img src="../assets/techstack/swift.svg" alt="">
         </div>
+      </div>
+      <div class="arrows">
+       <font-awesome-icon icon="fa-solid fa-arrow-left" />
+        <font-awesome-icon @click="setViewRight" icon="fa-solid fa-arrow-right" />
       </div>
     </div>
     </div>
@@ -31,6 +33,7 @@ export default {
   name: 'PortfolioView',
   data() {
     return {
+      categories: ['Electra', 'GuidEducation', 'Ghone', 'RIOT'],
       portfolio: [
         {
           type: "iOS App",
@@ -41,14 +44,33 @@ export default {
         },
         {
           type: "iOS App",
-          title: "RIOT Hybrid Board Game",
-          description: "an iOS 4-player game app that leverages NFC technology to enhance interaction between physical game components and electronic devices.",
+          title: "Electra",
+          description: "yeyyq",
           img: "",
           techStack: ""
         },
-      ]
+      ],
+      index: '0',
+      portoTitle: '',
+      portoType: '',
+      portoDesc: ''
+
     }
+  },
+  methods: {
+    setViewRight(){
+      let selected = (1 + this.index) % this.portfolio.length;
+      this.index = selected;
+
+      this.portoTitle = this.portfolio[selected].title;
+      this.portoType = this.portfolio[selected].type;
+      this.portoDesc = this.portfolio[selected].description
+    }
+  },
+  mounted() {
+    this.setViewRight();
   }
+
 }
 </script>
 
@@ -63,7 +85,6 @@ export default {
   height: 50px;
   position: relative;
   margin-bottom: 50px;
-  /* background-color: blueviolet; */
 }
 
 .portfolio-bar ul{
@@ -72,10 +93,10 @@ export default {
   width: 30%;
   height: 100%;;
   position: absolute;
-  /* background-color: cyan; */
 }
 
 .portfolio-bar ul li {
+  font-size: 1.1rem;
   display: flex;
   align-items: center;
   padding: 0 15px;
@@ -89,6 +110,7 @@ export default {
 }
 
 .detail-container {
+  /* width: max-content; */
   display: flex;
   flex-direction: row;
   overflow: auto;
@@ -99,10 +121,8 @@ export default {
   justify-self: space-evenly;
   align-items: center;
   width: 100vw;
-  /* height: 300px; */
-  /* width: 1000px; */
-  /* margin: 0 140px; */
-  background-color: khaki;
+  padding: 70px 150px;
+  /* background-color: khaki; */
 
 }
 
@@ -112,16 +132,11 @@ export default {
 }
 
 .detail-view .detail-description {
-  /* width: 40%; */
   display: flex;
   flex-direction: column;
   text-align: left;
+  width: 60%;
   /* flex-grow: 3s; */
-}
-
-.detail-view .detail-description .description {
-  /* width: 70%; */
-  /* background-color: cornflowerblue; */
 }
 
 .detail-description p:nth-child(1){
@@ -144,5 +159,20 @@ export default {
 
 .techused img {
   width: 35pt;
+}
+
+.arrows {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: darkgreen; */
+  left: 50px;
+  right: 50px;
+}
+
+.arrows svg {
+  width: 30px;
+  height: 30px;
+  padding: 20px;
 }
 </style>
