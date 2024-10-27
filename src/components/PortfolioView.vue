@@ -2,7 +2,7 @@
   <section class="portfolio">
     <div class="portfolio-bar">
       <ul>
-        <li v-for="category in categories" :key="category">{{ category }}</li>
+        <li v-for="(category, index) in categories" :key="index" @click="selectedItem(index)">{{ category }}</li>
       </ul>
     </div>
     <div class="detail-container">
@@ -37,14 +37,28 @@ export default {
       portfolio: [
         {
           type: "iOS App",
-          title: "RIOT Hybrid Board Game",
+          title: "Electra",
           description: "an iOS 4-player game app that leverages NFC technology to enhance interaction between physical game components and electronic devices.",
           img: "",
           techStack: ""
         },
         {
           type: "iOS App",
-          title: "Electra",
+          title: "GuidEducation",
+          description: "yeyyq",
+          img: "",
+          techStack: ""
+        },
+        {
+          type: "iOS App",
+          title: "Ghone",
+          description: "yeyyq",
+          img: "",
+          techStack: ""
+        },
+        {
+          type: "iOS App",
+          title: "RIOT Hybrid Board Game",
           description: "yeyyq",
           img: "",
           techStack: ""
@@ -76,6 +90,11 @@ export default {
       this.portoType = this.portfolio[selected].type;
       this.portoDesc = this.portfolio[selected].description;
     },
+    selectedItem(index){
+      this.portoTitle = this.portfolio[index].title;
+      this.portoType = this.portfolio[index].type;
+      this.portoDesc = this.portfolio[index].description;
+    }
   },
   mounted() {
     this.setViewRight();
@@ -144,9 +163,13 @@ export default {
 .detail-view .detail-description {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   text-align: left;
   width: 60%;
-  /* flex-grow: 3s; */
+  /* background-color: blanchedalmond; */
+  height: 100%;
+  padding: 30px 0;
+  box-sizing: border-box;
 }
 
 .detail-description p:nth-child(1){
