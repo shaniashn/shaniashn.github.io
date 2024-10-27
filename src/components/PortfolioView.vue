@@ -1,5 +1,6 @@
 <template>
   <section class="portfolio">
+    <div class="portfolio-title">projects</div>
     <div class="portfolio-bar">
       <ul>
         <li v-for="(category, index) in categories" :key="index" @click="selectedItem(index)">{{ category }}</li>
@@ -106,6 +107,14 @@ export default {
 <style>
 .portfolio {
   height: 100vh;
+}
+
+.portfolio-title {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background-color: var(--lightgreen-shade-color);
+  padding: 0 10%;
 }
 
 .portfolio-bar {
