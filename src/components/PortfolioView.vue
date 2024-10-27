@@ -7,7 +7,7 @@
     </div>
     <div class="detail-container">
 
-       <div class="detail-view"> <!-- v-for="porto in portfolio" :key="porto" -->
+      <div class="detail-view">
       <div class="detail-image">
         <img src="../assets/rect.svg" alt="">
       </div>
@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="arrows">
-       <font-awesome-icon icon="fa-solid fa-arrow-left" />
+       <font-awesome-icon @click="setViewLeft" icon="fa-solid fa-arrow-left" />
         <font-awesome-icon @click="setViewRight" icon="fa-solid fa-arrow-right" />
       </div>
     </div>
@@ -59,18 +59,28 @@ export default {
   },
   methods: {
     setViewRight(){
-      let selected = (1 + this.index) % this.portfolio.length;
-      this.index = selected;
+      if (this.index == this.portfolio.length-1) this.index = 0;
+      else {
+        this.index++;
+      }
 
+      this.portoTitle = this.portfolio[this.index].title;
+      this.portoType = this.portfolio[this.index].type;
+      this.portoDesc = this.portfolio[this.index].description;
+    },
+    setViewLeft(){
+      let selected = Math.abs((-1 + this.index) % this.portfolio.length);
+      this.index = selected;
+      
       this.portoTitle = this.portfolio[selected].title;
       this.portoType = this.portfolio[selected].type;
-      this.portoDesc = this.portfolio[selected].description
-    }
+      this.portoDesc = this.portfolio[selected].description;
+    },
   },
   mounted() {
     this.setViewRight();
+    this.setViewLeft();
   }
-
 }
 </script>
 
