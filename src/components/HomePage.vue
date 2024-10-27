@@ -16,21 +16,22 @@
       </div>
     </div>
   </section>
-  <section class="portfolio">
-    <PortfolioView />
-  </section>
+  <PortfolioView />
+  <AboutPage />
   <Nav />
 </template>
 
 <script>
 import Nav from './NavigationBar.vue';
 import PortfolioView from './PortfolioView.vue';
+import AboutPage from './AboutPage.vue';
 
 export default {
   name: 'HomePage',
   components: {
     Nav,
-    PortfolioView
+    PortfolioView,
+    AboutPage
   }
 }
 </script>
