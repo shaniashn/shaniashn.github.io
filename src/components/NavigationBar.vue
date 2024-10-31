@@ -1,13 +1,13 @@
 <template>
   <header>
-    <nav>
+    <nav id="nav">
     <ul>
-      <a href="#home">
+      <a href="/">
         shania.shn
       </a>
     </ul>
     <ul>
-      <li>projects</li>
+      <a href="#portfolio"><li>projects</li></a>
       <li>about</li>
       <li>resume</li>
     </ul>
