@@ -1,10 +1,10 @@
 <template>
-  <section class="about">
+  <section class="about" id="about">
     <div class="about-bar">
-    <ul>
-      <li v-for="(category, index) in categories" :key="index">{{ category }}</li>
-    </ul>
-  </div>
+      <ul>
+        <li v-for="(category, index) in categories" :key="index">{{ category }}</li>
+      </ul>
+    </div>
   </section>
 
 </template>
@@ -22,7 +22,7 @@ export default {
 
 <style>
 .about {
-  height: 100vh;
+  height: max-content;
 }
 
 .about-bar {

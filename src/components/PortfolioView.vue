@@ -1,6 +1,6 @@
 <template>
   <section class="portfolio" id="portfolio">
-    <div class="portfolio-title">projects</div>
+    <!-- <div class="portfolio-title"><p>projects</p></div> -->
     <div class="portfolio-bar">
       <ul>
         <li v-for="(category, index) in categories" :key="index" @click="selectedItem(index)">{{ category }}</li>
@@ -9,21 +9,26 @@
     <div class="detail-container">
 
       <div class="detail-view">
-      <div class="detail-image">
-        <img src="../assets/rect.svg" alt="">
-      </div>
-      <div class="detail-description">
-        <p class="type">{{ portoType }}</p>
-        <p class="title">{{ portoTitle }}</p>
-        <p class="description">{{ portoDesc }}</p>
-        <div class="techused">
-          <img src="../assets/techstack/swift.svg" alt="">
+        <div class="detail-image">
+          <img src="../assets/rect.svg" alt="">
         </div>
-      </div>
-      <div class="arrows">
-       <font-awesome-icon @click="setViewLeft" icon="fa-solid fa-arrow-left" />
-        <font-awesome-icon @click="setViewRight" icon="fa-solid fa-arrow-right" />
-      </div>
+        <div class="detail-description">
+          <div class="detail-title">
+            <p class="type">{{ portoType }}</p>
+            <p class="title">{{ portoTitle }}</p>
+          </div>
+
+          <div class="detail-desc">
+            <p class="description">{{ portoDesc }}</p>
+          <div class="techused">
+            <img src="../assets/techstack/swift.svg" alt="">
+          </div>
+          </div>
+        </div>
+        <div class="arrows">
+        <font-awesome-icon @click="setViewLeft" icon="fa-solid fa-arrow-left" />
+          <font-awesome-icon @click="setViewRight" icon="fa-solid fa-arrow-right" />
+        </div>
     </div>
     </div>
   </section>
@@ -106,7 +111,8 @@ export default {
 
 <style>
 .portfolio {
-  height: 100vh;
+  height: max-content;
+  padding: 10%;
 }
 
 .portfolio-title {
@@ -115,6 +121,8 @@ export default {
   height: 50px;
   background-color: var(--lightgreen-shade-color);
   padding: 0 10%;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .portfolio-bar {
@@ -122,7 +130,6 @@ export default {
   justify-content: center;
   height: 50px;
   position: relative;
-  margin-bottom: 50px;
 }
 
 .portfolio-bar ul{
@@ -181,23 +188,35 @@ export default {
   box-sizing: border-box;
 }
 
-.detail-description p:nth-child(1){
+
+
+/* .detail-description p:nth-child(1){
   font-size: 1.1rem;
   font-weight: 600;
-  line-height: 0;
+  /* line-height: 0;
+} */
+
+.detail-title p {
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
-.detail-description p:nth-child(2){
+.detail-desc p {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+/* .detail-description p:nth-child(2){
   font-size: 1.7rem;
   font-weight: 700;
-  line-height: 0;
-}
+  /* line-height: 0;
+} 
 
 .detail-description p:nth-child(3){
   font-size: 1.1em;
   font-weight: 500;
 
-}
+} */
 
 .techused img {
   width: 35pt;

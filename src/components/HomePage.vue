@@ -1,7 +1,8 @@
 <template>
   <section class="welcome" id="home">
     <div class="welcoming">
-      <div class="welcome-text">
+      <div class="welcome-container">
+        <div class="welcome-text">
         <h1>HI, <span>Sha Nia</span> here!</h1>
         <h5>an iOS Developer who does design.</h5>
         <div class="socials">
@@ -13,6 +14,7 @@
       </div>
       <div class="welcome-img">
         <img src="../assets/hero-full.svg" alt="person waving">
+      </div>
       </div>
     </div>
   </section>
@@ -43,15 +45,24 @@ Nav {
 }
 
 .welcome {
-  height: 100vh;
+  height: max-content;
+  position: relative;
 }
 
-.welcoming {
-  text-align: left;
-  margin: 140px;
+.welcome-container {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.welcoming {
+  position: relative;
+  text-align: left;
+  padding: 10% 120px 10%;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: space-between; */
 }
 
 .welcome-text {

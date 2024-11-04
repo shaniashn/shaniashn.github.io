@@ -8,8 +8,8 @@
     </ul>
     <ul>
       <a href="#portfolio"><li>projects</li></a>
-      <li>about</li>
-      <li>resume</li>
+      <a href="#about"><li>about</li></a> 
+      <a href="#"><li>resume</li></a> 
     </ul>
   </nav>
   </header>
@@ -64,14 +64,16 @@ nav ul {
 }
 
 nav ul a {
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
   text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: 600;
 }
 
-nav ul a,
-nav ul li {
-  font-size: 1.5em;
+nav ul li a {
+  font-size: 1.1em;
   font-weight: 600;
   color: var(--secondary-color);
 }
