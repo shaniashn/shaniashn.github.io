@@ -5,6 +5,11 @@
         <li v-for="(category, index) in categories" :key="index">{{ category }}</li>
       </ul>
     </div>
+    <div class="about-view">
+      <div class="about-img">
+        <img src="../assets/pic.svg" alt="sha nia">
+      </div>
+    </div>
   </section>
 
 </template>
