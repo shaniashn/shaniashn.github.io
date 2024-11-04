@@ -31,6 +31,7 @@
         </div>
     </div>
     </div>
+    
   </section>
 </template>
 
@@ -166,7 +167,7 @@ export default {
   justify-self: space-evenly;
   align-items: center;
   width: 100vw;
-  padding: 70px 150px;
+  padding: 70px 0;
   /* background-color: khaki; */
 
 }
@@ -198,6 +199,11 @@ export default {
 
 .detail-title p {
   font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.detail-title .title{
+  font-size: 1.7rem;
   font-weight: 600;
 }
 
