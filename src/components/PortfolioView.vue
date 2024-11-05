@@ -188,14 +188,6 @@ export default {
   box-sizing: border-box;
 }
 
-
-
-/* .detail-description p:nth-child(1){
-  font-size: 1.1rem;
-  font-weight: 600;
-  /* line-height: 0;
-} */
-
 .detail-title p {
   font-size: 1.1rem;
   font-weight: 600;
@@ -210,18 +202,6 @@ export default {
   font-size: 1.1em;
   font-weight: 500;
 }
-
-/* .detail-description p:nth-child(2){
-  font-size: 1.7rem;
-  font-weight: 700;
-  /* line-height: 0;
-} 
-
-.detail-description p:nth-child(3){
-  font-size: 1.1em;
-  font-weight: 500;
-
-} */
 
 .techused img {
   width: 35pt;
