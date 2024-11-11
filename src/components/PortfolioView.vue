@@ -7,7 +7,6 @@
       </ul>
     </div>
     <div class="detail-container">
-
       <div class="detail-view">
         <div class="detail-image">
           <img src="../assets/rect.svg" alt="">
