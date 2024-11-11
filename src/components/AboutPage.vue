@@ -9,6 +9,9 @@
       <div class="about-img">
         <img src="../assets/pic.svg" alt="sha nia">
       </div>
+      <div class="about-desc">
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer facilisis mi pharetra, tempor ante eu, feugiat justo. Nunc commodo sollicitudin laoreet. Nulla vitae cursus leo, eget fermentum augue. Nunc ut lectus erat. Quisque eget fringilla nisl, ut venenatis mauris. Praesent efficitur interdum lorem, vitae feugiat quam congue sit amet. Suspendisse rutrum elit sed accumsan posuere.</p>
+      </div>
     </div>
   </section>
 
@@ -58,5 +61,11 @@ export default {
 .about-bar ul li:hover {
   background-color: var(--pink-color);
   cursor: default;
+}
+
+.about-view {
+  background-color: blueviolet;
+  display: flex;
+  justify-content: space-around;
 }
 </style>
