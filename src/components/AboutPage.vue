@@ -7,7 +7,7 @@
     </div>
     <div class="about-view">
       <div class="about-img">
-        <img src="../assets/pic.svg" alt="sha nia">
+        <img src="../assets/pic.svg" alt="shania">
       </div>
       <div class="about-desc">
         <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer facilisis mi pharetra, tempor ante eu, feugiat justo. Nunc commodo sollicitudin laoreet. Nulla vitae cursus leo, eget fermentum augue. Nunc ut lectus erat. Quisque eget fringilla nisl, ut venenatis mauris. Praesent efficitur interdum lorem, vitae feugiat quam congue sit amet. Suspendisse rutrum elit sed accumsan posuere.</p>
