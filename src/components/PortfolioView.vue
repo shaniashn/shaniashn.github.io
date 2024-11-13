@@ -167,7 +167,6 @@ export default {
   width: 100vw;
   padding: 70px 0;
   /* background-color: khaki; */
-
 }
 
 .detail-view .detail-image {

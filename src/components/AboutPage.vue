@@ -10,7 +10,10 @@
         <img src="../assets/pic.svg" alt="shania">
       </div>
       <div class="about-desc">
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer facilisis mi pharetra, tempor ante eu, feugiat justo. Nunc commodo sollicitudin laoreet. Nulla vitae cursus leo, eget fermentum augue. Nunc ut lectus erat. Quisque eget fringilla nisl, ut venenatis mauris. Praesent efficitur interdum lorem, vitae feugiat quam congue sit amet. Suspendisse rutrum elit sed accumsan posuere.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer facilisis mi pharetra, tempor ante eu, feugiat justo. Nunc commodo sollicitudin laoreet.</p>
+        <p>Nulla vitae cursus leo, eget fermentum augue. Nunc ut lectus erat. Quisque eget fringilla nisl, ut venenatis mauris. Praesent efficitur interdum lorem, vitae feugiat quam congue sit amet. Suspendisse rutrum elit sed accumsan posuere.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer facilisis mi pharetra, tempor ante eu, feugiat justo. Nunc commodo sollicitudin laoreet.</p>
+        <p>💖💖💖</p>
       </div>
     </div>
   </section>
@@ -64,8 +67,30 @@ export default {
 }
 
 .about-view {
-  background-color: blueviolet;
+  width: 100%;
+  /* background-color: blueviolet; */
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  padding: 20px 60px;
+  box-sizing: border-box;
 }
+
+.about-view .about-img img{
+  width: 450px;
+}
+
+.about-desc {
+  width: 40%;
+}
+
+.about-desc p {
+  text-align: justify;
+  font-weight: 500;
+  line-height: 2pc;
+}
+
+.about-desc p:nth-child(4){
+  font-size: 20px;
+}
+
 </style>
