@@ -25,7 +25,7 @@ export default {
   name: 'AboutPage',
   data(){
     return {
-      categories: ['Experience', 'Achievement', 'Education', 'Skills'],
+      categories: ['Experience', 'Achievement', 'Skills'],
     }
   }
 }
