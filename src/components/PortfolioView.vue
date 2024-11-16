@@ -9,7 +9,8 @@
     <div class="detail-container">
       <div class="detail-view">
         <div class="detail-image">
-          <img src="../assets/rect.svg" alt="">
+          <!-- <img src="../assets/rect.svg" alt=""> -->
+          <img src="" alt="">
         </div>
         <div class="detail-description">
           <div class="detail-title">
@@ -38,33 +39,33 @@ export default {
   name: 'PortfolioView',
   data() {
     return {
-      categories: ['Electra', 'GuidEducation', 'Ghone', 'RIOT'],
+      categories: ['RIOT', 'Ghone', 'Electra', 'GuidEducation'],
       portfolio: [
         {
           type: "iOS App",
+          title: "RIOT Hybrid Board Game",
+          description: "an iOS app that helps board game players to play hybrid board games and bridges the playing experience with physical and digital components with NFC technology.",
+          img: "./",
+          techStack: ""
+        },
+        {
+          type: "iOS App",
+          title: "Ghone",
+          description: "an iOS app that brings a virtual companion to life and will accompany you through moments of unease.",
+          img: "",
+          techStack: ""
+        },
+        {
+          type: "iOS App",
           title: "Electra",
-          description: "an iOS 4-player game app that leverages NFC technology to enhance interaction between physical game components and electronic devices.",
+          description: "a native iOS app that can calculate electricity usage and electricity cost for people who want to optimize their electricity bill budget by inputing factors that used for calculate electricity usage such as watt, time (hour) and tariff/kWh",
           img: "",
           techStack: ""
         },
         {
           type: "iOS App",
           title: "GuidEducation",
-          description: "yeyyq",
-          img: "",
-          techStack: ""
-        },
-        {
-          type: "iOS App",
-          title: "Ghone",
-          description: "yeyyq",
-          img: "",
-          techStack: ""
-        },
-        {
-          type: "iOS App",
-          title: "RIOT Hybrid Board Game",
-          description: "yeyyq",
+          description: "an iOS app that could help high school teachers to teach better by providing guidelines that can help students’ engagement",
           img: "",
           techStack: ""
         },
@@ -72,7 +73,8 @@ export default {
       index: '0',
       portoTitle: '',
       portoType: '',
-      portoDesc: ''
+      portoDesc: '',
+      portoImg: ''
 
     }
   },
