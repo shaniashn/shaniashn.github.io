@@ -10,9 +10,12 @@
         <img src="../assets/pic.svg" alt="shania">
       </div>
       <div class="about-desc">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer facilisis mi pharetra, tempor ante eu, feugiat justo. Nunc commodo sollicitudin laoreet.</p>
-        <p>Nulla vitae cursus leo, eget fermentum augue. Nunc ut lectus erat. Quisque eget fringilla nisl, ut venenatis mauris. Praesent efficitur interdum lorem, vitae feugiat quam congue sit amet. Suspendisse rutrum elit sed accumsan posuere.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer facilisis mi pharetra, tempor ante eu, feugiat justo. Nunc commodo sollicitudin laoreet.</p>
+        <p>Hi once again! </p>
+        <p>I am a creative developer, graduated with a B. Eng in Computer Science, and you can call me Shan.</p>
+        <p>I enjoy building interfaces with rich animations, staying in the flow until I find the perfect moment for animation timing, experimenting with new animation styles, and enhancing them with playful color vibes.</p>
+        <p>I’m always excited to introduce myself as a person who loves to combine my crafted designs and give it to life with code, since those are two things I always working on.</p>
+        <p>My main tech stacks are Swift, SwiftUI, Javascript and Vue.js. For designing, mainly I used Adobe Ilustrator and Figma.</p>
+        <p>Okay, a little bit TMI, I love K-Pop girlgroups especially Red Velvet, NewJeans and aespa.</p>
         <p>💖💖💖</p>
       </div>
     </div>
@@ -89,8 +92,8 @@ export default {
   line-height: 2pc;
 }
 
-.about-desc p:nth-child(4){
+/* .about-desc p:nth-child(4){
   font-size: 20px;
-}
+} */
 
 </style>
