@@ -236,8 +236,12 @@ export default {
 }
 
 .arrows svg {
-  width: 30px;
-  height: 30px;
-  padding: 20px;
+  width: 25px;
+  height: 25px;
+  aspect-ratio: 1/1;
+  padding: 10px;
+  background-color:rgb(38, 37, 36);
+  color: #79C4E2;
+  border-radius: 75pt;
 }
 </style>
