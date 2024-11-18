@@ -7,7 +7,8 @@
     </div>
     <div class="about-view">
       <div class="about-img">
-        <img src="../assets/pic.svg" alt="shania">
+        <!-- <img src="../assets/pic.svg" alt="shania"> -->
+        <img :src="profileImage" alt="shania">
       </div>
       <div class="about-desc">
         <p>Hi once again! </p>
@@ -24,11 +25,14 @@
 </template>
 
 <script>
+import profileImg from '../assets/profile-img.png'
+
 export default {
   name: 'AboutPage',
   data(){
     return {
       categories: ['Experience', 'Achievement', 'Skills'],
+      profileImage: profileImg
     }
   }
 }
@@ -80,6 +84,7 @@ export default {
 
 .about-view .about-img img{
   width: 450px;
+  border: 5px solid var(--blue-color);
 }
 
 .about-desc {
