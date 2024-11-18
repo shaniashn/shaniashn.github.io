@@ -9,9 +9,8 @@
     <div class="detail-container">
       <div class="detail-view">
         <div class="detail-image">
-          <!-- <img src="../assets/rect.svg" alt=""> -->
-          <!-- <img src="../assets/electra.png" alt=""> -->
-           <img v-bind:src="'../assets/'+ portoImg" alt="">
+           <img v-bind:src=portoImg  alt="">
+           
         </div>
         <div class="detail-description">
           <div class="detail-title">
@@ -36,6 +35,11 @@
 </template>
 
 <script>
+import ghoneImg from '../assets/ghone.png';
+import riotImg from '../assets/riot.png';
+import electraImg from '../assets/electra.png';
+import guideducationImg from '../assets/guideducation.png';
+
 export default {
   name: 'PortfolioView',
   data() {
@@ -46,28 +50,28 @@ export default {
           type: "iOS App",
           title: "RIOT Hybrid Board Game",
           description: "an iOS app that helps board game players to play hybrid board games and bridges the playing experience with physical and digital components with NFC technology.",
-          img: 'riot.png',
+          img: riotImg,
           techStack: ""
         },
         {
           type: "iOS App",
           title: "Ghone",
           description: "an iOS app that brings a virtual companion to life and will accompany you through moments of unease.",
-          img: "ghone.png",
+          img: ghoneImg,
           techStack: ""
         },
         {
           type: "iOS App",
           title: "Electra",
           description: "a native iOS app that can calculate electricity usage and electricity cost for people who want to optimize their electricity bill budget by inputing factors that used for calculate electricity usage such as watt, time (hour) and tariff/kWh",
-          img: "../assets/riot.png",
+          img: electraImg,
           techStack: ""
         },
         {
           type: "iOS App",
           title: "GuidEducation",
           description: "an iOS app that could help high school teachers to teach better by providing guidelines that can help students’ engagement",
-          img: "../assets/guideducation.png",
+          img: guideducationImg,
           techStack: ""
         },
       ],
@@ -75,7 +79,7 @@ export default {
       portoTitle: '',
       portoType: '',
       portoDesc: '',
-      portoImg: 'rect.svg'
+      portoImg: riotImg
 
     }
   },
@@ -95,7 +99,7 @@ export default {
     setViewLeft(){
       console.log("left", this.index);
       
-      let selected = Math.abs((-1 + this.index) % this.portfolio.length);
+      let selected = Math.abs((3 - this.index) % this.portfolio.length);
       this.index = selected;
       console.log("selected ", selected);
       
@@ -107,7 +111,7 @@ export default {
     selectedItem(index){
       this.portoTitle = this.portfolio[index].title;
       this.portoType = this.portfolio[index].type;
-      this.portoImg = this.portfolio[this.index].img;
+      this.portoImg = this.portfolio[index].img;
       this.portoDesc = this.portfolio[index].description;
     }
   },
