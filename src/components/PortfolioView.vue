@@ -99,7 +99,7 @@ export default {
     setViewLeft(){
       console.log("left", this.index);
       
-      let selected = Math.abs((3 - this.index) % this.portfolio.length);
+      let selected = Math.abs((3 + this.index) % this.portfolio.length);
       this.index = selected;
       console.log("selected ", selected);
       
