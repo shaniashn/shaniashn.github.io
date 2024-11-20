@@ -2,22 +2,29 @@
   <section class="about" id="about">
     <div class="about-bar">
       <ul>
-        <li v-for="(category, index) in categories" :key="index">{{ category }}</li>
+        <li v-for="(category, index) in categories" :key="index" @click="selectCategory(index)">{{ category }}</li>
       </ul>
     </div>
-    <div class="about-view">
-      <div class="about-img">
-        <!-- <img src="../assets/pic.svg" alt="shania"> -->
-        <img :src="profileImage" alt="shania">
+    <div class="about-view-container">
+      <div class="about-view" id="about" v-if="showAbout">
+        <div class="about-img">
+          <img :src="profileImage" alt="shania">
+        </div>
+        <div class="about-desc">
+          <p>Hi once again! </p>
+          <p>I am a creative developer, graduated with a B. Eng in Computer Science, and you can call me Shan.</p>
+          <p>I enjoy building interfaces with rich animations, staying in the flow until I find the perfect moment for
+            animation timing, experimenting with new animation styles, and enhancing them with playful color vibes.</p>
+          <p>I’m always excited to introduce myself as a person who loves to combine my crafted designs and give it to
+            life with code, since those are two things I always working on.</p>
+          <p>My main tech stacks are Swift, SwiftUI, Javascript and Vue.js. For designing, mainly I used Adobe
+            Ilustrator and Figma.</p>
+          <p>Okay, a little bit TMI, I love K-Pop girlgroups especially Red Velvet, NewJeans and aespa.</p>
+          <p>💖💖💖</p>
+        </div>
       </div>
-      <div class="about-desc">
-        <p>Hi once again! </p>
-        <p>I am a creative developer, graduated with a B. Eng in Computer Science, and you can call me Shan.</p>
-        <p>I enjoy building interfaces with rich animations, staying in the flow until I find the perfect moment for animation timing, experimenting with new animation styles, and enhancing them with playful color vibes.</p>
-        <p>I’m always excited to introduce myself as a person who loves to combine my crafted designs and give it to life with code, since those are two things I always working on.</p>
-        <p>My main tech stacks are Swift, SwiftUI, Javascript and Vue.js. For designing, mainly I used Adobe Ilustrator and Figma.</p>
-        <p>Okay, a little bit TMI, I love K-Pop girlgroups especially Red Velvet, NewJeans and aespa.</p>
-        <p>💖💖💖</p>
+      <div class="about-view" id="experience" v-if="showExp">
+        <ExperienceSection />
       </div>
     </div>
   </section>
@@ -26,15 +33,29 @@
 
 <script>
 import profileImg from '../assets/profile-img.png'
+import ExperienceSection from './About/ExperienceSection.vue';
 
 export default {
   name: 'AboutPage',
   data(){
     return {
-      categories: ['Experience', 'Achievement', 'Skills'],
-      profileImage: profileImg
+      categories: ['About', 'Experience', 'Achievement', 'Skills'],
+      profileImage: profileImg,
+      showAbout: true,
+      showExp: false
     }
-  }
+  },
+  components: {
+    ExperienceSection
+  },
+  methods: {
+    selectCategory(index){
+      console.log(this.categories[index].toLowerCase());
+      let category = this.categories[index].toLowerCase()
+      this.showAbout = category == "about" ? true : false;
+      this.showExp = category == "experience" ? true : false;
+    }
+  },
 }
 </script>
 
