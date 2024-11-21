@@ -12,15 +12,13 @@
         </div>
         <div class="about-desc">
           <p>Hi once again! </p>
-          <p>I am a creative developer, graduated with a B. Eng in Computer Science, and you can call me Shan.</p>
+          <p>I’m always excited to introduce myself as creative developer, since those are two things I always working on.</p>
           <p>I enjoy building interfaces with rich animations, staying in the flow until I find the perfect moment for
             animation timing, experimenting with new animation styles, and enhancing them with playful color vibes.</p>
-          <p>I’m always excited to introduce myself as a person who loves to combine my crafted designs and give it to
-            life with code, since those are two things I always working on.</p>
+          <p>One of my works won Apple’s WWDC Swift Student Challenge 2024, where I showcased my passion to combine my crafted designs and give it to life with code.</p>
           <p>My main tech stacks are Swift, SwiftUI, Javascript and Vue.js. For designing, mainly I used Adobe
             Ilustrator and Figma.</p>
           <p>Okay, a little bit TMI, I love K-Pop girlgroups especially Red Velvet, NewJeans and aespa.</p>
-          <p>💖💖💖</p>
         </div>
       </div>
       <div class="about-view" id="experience" v-if="showExp">
@@ -39,7 +37,7 @@ export default {
   name: 'AboutPage',
   data(){
     return {
-      categories: ['About', 'Experience', 'Achievement', 'Skills'],
+      categories: ['About', 'Experience & Achievement', 'Skills'],
       profileImage: profileImg,
       showAbout: true,
       showExp: false
@@ -53,7 +51,7 @@ export default {
       console.log(this.categories[index].toLowerCase());
       let category = this.categories[index].toLowerCase()
       this.showAbout = category == "about" ? true : false;
-      this.showExp = category == "experience" ? true : false;
+      this.showExp = category == "experience & achievement" ? true : false;
     }
   },
 }
@@ -104,8 +102,9 @@ export default {
 }
 
 .about-view .about-img img{
-  width: 450px;
+  width: 380px;
   border: 5px solid var(--blue-color);
+  margin: 5% 0;
 }
 
 .about-desc {
