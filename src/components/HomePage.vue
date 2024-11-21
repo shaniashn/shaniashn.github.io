@@ -39,6 +39,10 @@ export default {
 </script>
 
 <style>
+section {
+  scroll-snap-align: start;
+}
+
 Nav {
   position: sticky;
   z-index: 10009;
