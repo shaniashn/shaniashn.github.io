@@ -23,11 +23,18 @@ export default {
   --pink-color: #E6A4B4;
   --blue-color: #79C4E2;
   --lightgreen-shade-color: rgb(213, 240, 193, 0.5);
+
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   background-color: var(--primary-color);
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 #app {
