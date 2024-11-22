@@ -37,7 +37,7 @@ export default {
   name: 'AboutPage',
   data(){
     return {
-      categories: ['About', 'Experience & Achievement', 'Skills'],
+      categories: ['about', 'experience & achievement', 'skills'],
       profileImage: profileImg,
       showAbout: true,
       showExp: false
@@ -48,8 +48,8 @@ export default {
   },
   methods: {
     selectCategory(index){
-      console.log(this.categories[index].toLowerCase());
-      let category = this.categories[index].toLowerCase()
+      console.log(this.categories[index]);
+      let category = this.categories[index]
       this.showAbout = category == "about" ? true : false;
       this.showExp = category == "experience & achievement" ? true : false;
     }
@@ -101,6 +101,10 @@ export default {
   box-sizing: border-box;
 }
 
+.about-img {
+  display: grid;
+}
+
 .about-view .about-img img{
   width: 380px;
   border: 5px solid var(--blue-color);
@@ -109,6 +113,7 @@ export default {
 
 .about-desc {
   width: 40%;
+  display: grid;
 }
 
 .about-desc p {
