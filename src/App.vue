@@ -26,6 +26,7 @@ export default {
 
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  scroll-snap-stop: always;
 }
 
 body {
