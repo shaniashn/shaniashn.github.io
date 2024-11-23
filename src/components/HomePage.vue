@@ -39,8 +39,9 @@ export default {
 </script>
 
 <style>
-section {
-  scroll-snap-align: start;
+.section {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
 }
 
 Nav {
