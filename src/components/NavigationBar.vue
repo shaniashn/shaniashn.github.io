@@ -9,7 +9,7 @@
     <ul>
       <a href="#portfolio"><li>projects</li></a>
       <a href="#about"><li>about</li></a> 
-      <a href="#"><li>resume</li></a> 
+      <a href="https://read.cv/shaniashn" target="_blank"><li>resume</li></a> 
     </ul>
   </nav>
   </header>
