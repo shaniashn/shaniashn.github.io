@@ -6,7 +6,7 @@
       </ul>
     </div>
     <div class="about-view-container">
-      <div class="about-view" id="about" v-if="showAbout">
+      <div class="about-view" v-if="showAbout">
         <div class="about-img">
           <img :src="profileImage" alt="shania">
         </div>
@@ -19,8 +19,11 @@
           <p>Okay, a little bit TMI, I love K-Pop girlgroups especially Red Velvet, NewJeans and aespa.</p>
         </div>
       </div>
-      <div class="about-view" id="experience" v-if="showExp">
+      <div class="about-view" v-if="showExp">
         <ExperienceSection />
+      </div>
+      <div class="about-view" v-if="showSkill">
+        <SkillsSection />
       </div>
     </div>
   </section>
@@ -30,6 +33,7 @@
 <script>
 import profileImg from '../assets/profile-img.png'
 import ExperienceSection from './About/ExperienceSection.vue';
+import SkillsSection from "./About/SkillsSection.vue";
 
 export default {
   name: 'AboutPage',
@@ -38,11 +42,13 @@ export default {
       categories: ['about', 'experience & achievement', 'skills'],
       profileImage: profileImg,
       showAbout: true,
-      showExp: false
+      showExp: false,
+      showSkill: false
     }
   },
   components: {
-    ExperienceSection
+    ExperienceSection,
+    SkillsSection
   },
   methods: {
     selectCategory(index){
@@ -50,6 +56,7 @@ export default {
       let category = this.categories[index]
       this.showAbout = category == "about" ? true : false;
       this.showExp = category == "experience & achievement" ? true : false;
+      this.showSkill = category == "skills" ? true : false;
     }
   },
 }
@@ -97,7 +104,7 @@ export default {
   justify-content: space-evenly;
   padding: 20px 60px;
   box-sizing: border-box;
-  height: 80vh;
+  height: 70vh;
 }
 
 /* .about-img {
