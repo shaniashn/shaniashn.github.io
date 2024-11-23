@@ -1,28 +1,48 @@
 <template>
   <div class="experience-achievement">
     <div class="experience">
-      <!-- <div class="work" v-for="(experience, value, index) in allExperiences" :key="index">
-        <p>{{ experience }}</p>
-        <p>{{ value }}</p>
-      </div> -->
-      <div class="work">
-        <img src="../../assets/flower.svg" alt="">
-        <p>iOS Developer</p>
-        <p>Apple Developer Academy</p>
+      <h5>experience</h5>
+      <div class="flower">
+        <img src="../../assets/flower1.svg">
+        <div class="item">
+          <p>Software Engineer Intern</p>
+          <p>Constellar</p>
+        </div>
       </div>
-      <div class="work">
-        <p>Software Engineer Intern</p>
-        <p>Constellar</p>
+      <div class="flower">
+        <img src="../../assets/flower2.svg">
+        <div class="item">
+          <p>iOS Developer</p>
+          <p>Apple Developer Academy</p>
+        </div>
       </div>
-      <div class="work">
-        <p>Back-End Developer</p>
-        <p>Dinas Pendidikan Kota Tanjungpinang</p>
+      <div class="flower">
+        <img src="../../assets/flower3.svg">
+        <div class="item">
+          <p>Back-End Developer</p>
+          <p>Dinas Pendidikan Kota Tanjungpinang</p>
+        </div>
       </div>
     </div>
-    <div class="achievement">
-      <div class="wins">
-        <p>WWDC Swift Student Challenge</p>
+    <div class="abt-img">
+      <div class="achievement">
+        <h5>achievement</h5>
+        <div class="flower">
+          <img src="../../assets/flower1.svg">
+          <div class="item">
+            <p>WWDC Swift Student Challenge 2024</p>
+            <p>Apple</p>
+          </div>
+        </div>
+        <div class="flower">
+          <img src="../../assets/flower2.svg">
+          <div class="item">
+            <p>Poster Design Competition</p>
+            <p>BEM FE UMRAH</p>
+          </div>
+        </div>
       </div>
+      <img src="../../assets/dummy-abt.svg">
     </div>
   </div>
 </template>
@@ -42,11 +62,73 @@ export default {
 .experience-achievement {
   display: flex;
   text-align: left;
+  width: 100%;
+  height: 70vh;
+  /* background-color: burlywood; */
+  justify-content: space-evenly;
+  align-items: flex-start;
 }
 
-
-.work img{
+.item img{
   width: 50px;
+  height: 50px;
+}
+
+.item p:first-child {
+  font-weight: 500;
+  font-size: larger;
+  line-height: 0pc;
+}
+
+.flower {
+  display: flex;
+}
+
+.achievement .flower img, .experience .flower img{
+  width: 30px;
   height: auto;
+  margin-right: 20px;
+}
+
+.experience {
+  display: grid;
+  /* background-color: aquamarine; */
+  gap: 5%;
+  height: max-content;
+}
+
+.abt-img {
+  display: grid;
+  justify-content: space-around;
+  /* background-color: aqua; */
+  gap: 40%;
+  /* height: 75%; */
+  /* grid-auto-flow: column; */
+}
+
+.abt-img img {
+  width: 500px;
+  height: auto;
+  /* margin-top: 50%; */
+}
+
+.achievement {
+  display: grid;
+  justify-content: space-around;
+  /* background-color: beige; */
+  gap: 5%;
+}
+
+.experience h5, .achievement h5 {
+  font-style: italic;
+  font-size: large;
+}
+
+.experience h5 {
+  color: var(--blue-color);
+}
+
+.achievement h5 {
+  color: var(--pink-color);
 }
 </style>
