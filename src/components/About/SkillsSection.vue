@@ -45,6 +45,7 @@ export default {
   grid-template-columns: repeat(3, 1fr);
   /* column-gap: 10%; */
   justify-content: space-around;
+  height: 70vh;
 }
 
 .item img {
