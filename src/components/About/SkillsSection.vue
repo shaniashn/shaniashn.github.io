@@ -45,17 +45,28 @@ export default {
 <style scoped>
 .skills {
   width: 100%;
-  display: grid;
+  /* display: grid; */
+  /* grid-auto-flow: row; */
+  /* grid-auto-columns: 1fr 1fr 1fr; */
   /* grid-template-columns: 50px 50px; */
   /* grid-auto-flow: column; */
-  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: repeat(3, 1fr); */
   /* column-gap: 10%; */
-  justify-content: space-around;
+  
   height: 70vh;
+  gap: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: repeat(2, 1fr); */
+  justify-content: space-around;
 }
 
 .item img {
-  width: 60px;
+  width: 100px;
   height: auto;
+  padding: 20px;
 }
 </style>
