@@ -1,6 +1,5 @@
-<template>
+\<template>
   <section class="portfolio" id="portfolio">
-    <!-- <div class="portfolio-title"><p>projects</p></div> -->
     <div class="portfolio-bar">
       <ul>
         <li v-for="(category, index) in categories" :key="index" @click="selectedItem(index)">{{ category }}</li>
@@ -10,14 +9,12 @@
       <div class="detail-view">
         <div class="detail-image">
            <img v-bind:src=portoImg  alt="">
-           
         </div>
         <div class="detail-description">
           <div class="detail-title">
             <p class="type">{{ portoType }}</p>
             <p class="title">{{ portoTitle }}</p>
           </div>
-
           <div class="detail-desc">
             <p class="description">{{ portoDesc }}</p>
           <div class="techused">
@@ -85,7 +82,6 @@ export default {
   },
   methods: {
     setViewRight(){
-      // console.log(this.index);
       if (this.index == this.portfolio.length-1) this.index = 0;
       else {
         this.index++;
@@ -118,15 +114,14 @@ export default {
   mounted() {
     this.setViewRight();
     console.log(this.index);
-    
-    // this.setViewLeft();
   }
 }
 </script>
 
 <style>
 .portfolio {
-  height: max-content;
+  /* height: max-content; */
+  height: 100vh;
   padding: 10%;
 }
 
