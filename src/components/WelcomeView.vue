@@ -9,7 +9,7 @@
           <a href="https://www.linkedin.com/in/shaniasiahaan/" target="_blank"><font-awesome-icon icon="fa-brands fa-linkedin-in" size="2x" /></a>
           <a href="https://github.com/shaniashn" target="_blank"><font-awesome-icon icon="fa-brands fa-github" size="2x" /></a>
           <a href="https://dribbble.com/shaniashn" target="_blank"><font-awesome-icon icon="fa-brands fa-dribbble" size="2x" /></a>
-          <a href="https://docs.google.com/document/d/1laLjxe9eH63vIoRfLF0_wORnFrbtDu7MZRh8EoR3urA/edit?tab=t.0" target="_blank"><font-awesome-icon icon="fa-regular fa-file" size="2x" /></a>
+          <a href="https://drive.google.com/file/d/15Kw_gHj2kTkWmNSRBQf3AkllipPXEJVU/view?usp=drive_link" target="_blank"><font-awesome-icon icon="fa-regular fa-file" size="2x" /></a>
         </div>
       </div>
       <div class="welcome-img">
