@@ -54,19 +54,31 @@ export default {
   /* column-gap: 10%; */
   
   height: 70vh;
-  gap: 1rem;
+  
 }
 
-.grid {
+/* .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* grid-template-rows: repeat(2, 1fr); */
   justify-content: space-around;
+} */
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: row; */
+  /* background-color: aquamarine; */
+  gap: 1rem;
+  justify-content: space-evenly;
 }
 
 .item img {
   width: 100px;
   height: auto;
-  padding: 20px;
+  /* background-color: bisque; */
+}
+
+.item {
+  padding: 70px;
 }
 </style>
