@@ -42,7 +42,7 @@
           </div>
         </div>
       </div>
-      <img src="../../assets/dummy-abt.svg">
+      <img src="../../assets/cat.svg">
     </div>
   </div>
 </template>
