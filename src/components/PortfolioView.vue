@@ -8,7 +8,7 @@
     <div class="detail-container">
       <div class="detail-view">
         <div class="detail-image">
-           <img v-bind:src=portoImg  alt="">
+           <img :src=portoImg alt="" :style="{border: borderColors}">
         </div>
         <div class="detail-description">
           <div class="detail-title">
@@ -76,11 +76,19 @@ export default {
       portoTitle: '',
       portoType: '',
       portoDesc: '',
-      portoImg: riotImg
+      portoImg: riotImg,
+      borderColors: ''
 
     }
   },
   methods: {
+    changeBorderColor(){
+      let colors = ["#ABD9BB", "#E6A4B4", "#79C4E2"]
+      let randomNum = Math.floor(Math.random() * 3);
+      console.log("random ", randomNum);
+      
+      this.borderColors = `5px solid ${colors[randomNum]}`
+    },
     setViewRight(){
       if (this.index == this.portfolio.length-1) this.index = 0;
       else {
@@ -91,6 +99,7 @@ export default {
       this.portoType = this.portfolio[this.index].type;
       this.portoImg = this.portfolio[this.index].img;
       this.portoDesc = this.portfolio[this.index].description;
+      this.changeBorderColor()
     },
     setViewLeft(){
       console.log("left", this.index);
@@ -103,6 +112,7 @@ export default {
       this.portoType = this.portfolio[selected].type;
       this.portoImg = this.portfolio[selected].img;
       this.portoDesc = this.portfolio[selected].description;
+      this.changeBorderColor()
     },
     selectedItem(index){
       this.portoTitle = this.portfolio[index].title;
@@ -113,7 +123,8 @@ export default {
   },
   mounted() {
     this.setViewRight();
-    console.log(this.index);
+    this.changeBorderColor();
+    // console.log(this.index);
   }
 }
 </script>
@@ -187,7 +198,7 @@ export default {
 
 .detail-view .detail-image img {
   width: 100%;
-  border: 5px solid var(--green-color);
+  /* border: c; */
 }
 
 .detail-view .detail-description {
