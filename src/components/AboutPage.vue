@@ -63,8 +63,8 @@ export default {
 
 <style>
 .about {
-  /* height: max-content; */
-  height: 100vh;
+  height: max-content;
+  /* height: 100vh; */
   padding: 8%;
 }
 
@@ -104,7 +104,7 @@ export default {
   justify-content: space-evenly;
   padding: 20px 60px;
   box-sizing: border-box;
-  height: 70vh;
+  /* height: 70vh; */
 }
 
 /* .about-img {
@@ -136,5 +136,19 @@ export default {
 /* .about-desc p:nth-child(4){
   font-size: 20px;
 } */
+
+@media screen and (max-width: 795px) {
+  .about-view {
+    flex-direction: column;
+  }
+
+  .about-desc {
+    width: 100%;
+  }
+}
+
+.about-view .about-img img{
+  width: 300px;
+}
 
 </style>

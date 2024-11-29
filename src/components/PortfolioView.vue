@@ -6,7 +6,11 @@
       </ul>
     </div>
     <div class="detail-container">
+      <div class="arrows">
+        <font-awesome-icon @click="setViewLeft" icon="fa-solid fa-arrow-left" />
+      </div>
       <div class="detail-view">
+        
         <div class="detail-image">
            <img :src=portoImg alt="" :style="{border: borderColors}">
         </div>
@@ -22,12 +26,19 @@
           </div>
           </div>
         </div>
-        <div class="arrows">
+        <!-- <div class="arrows">
         <font-awesome-icon @click="setViewLeft" icon="fa-solid fa-arrow-left" />
+          <font-awesome-icon @click="setViewRight" icon="fa-solid fa-arrow-right" />
+        </div> -->
+      </div>
+      <div class="arrows">
           <font-awesome-icon @click="setViewRight" icon="fa-solid fa-arrow-right" />
         </div>
     </div>
-    </div>
+    <!-- <div class="arrows">
+        <font-awesome-icon @click="setViewLeft" icon="fa-solid fa-arrow-left" />
+          <font-awesome-icon @click="setViewRight" icon="fa-solid fa-arrow-right" />
+        </div> -->
   </section>
 </template>
 
@@ -132,7 +143,7 @@ export default {
 <style>
 .portfolio {
   /* height: max-content; */
-  height: 100vh;
+  /* height: 100vh; */
   padding: 10%;
 }
 
@@ -155,7 +166,7 @@ export default {
 
 .portfolio-bar ul{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 30%;
   height: 100%;;
   position: absolute;
@@ -180,6 +191,7 @@ export default {
   display: flex;
   flex-direction: row;
   overflow: auto;
+  align-items: center;
 }
 
 .detail-view {
@@ -187,8 +199,9 @@ export default {
   justify-self: space-evenly;
   align-items: center;
   width: 100vw;
-  padding: 70px 0;
-  /* background-color: khaki; */
+  /* padding: 70px 0; */
+  padding: 8% 5%;
+  background-color: khaki;
 }
 
 .detail-view .detail-image {
@@ -232,13 +245,22 @@ export default {
   width: 35pt;
 }
 
-.arrows {
+/* .arrows {
   position: absolute;
   display: flex;
   justify-content: space-between;
-  /* background-color: darkgreen; */
   left: 50px;
   right: 50px;
+} */
+
+/* .arrows {
+  display: grid;
+  justify-content: space-between;
+  width: 100%;
+} */
+
+.arrows {
+  background-color: antiquewhite;
 }
 
 .arrows svg {
@@ -249,5 +271,20 @@ export default {
   background-color:rgb(38, 37, 36);
   color: #79C4E2;
   border-radius: 75pt;
+}
+
+/* @media screen and (max-width: 1031px) { */
+@media screen and (max-width: 1150px) {
+  .detail-view {
+    padding: 5% 11%;
+    flex-direction: column;
+  }
+
+  .arrows {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    transform: none;
+  }
 }
 </style>

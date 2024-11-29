@@ -70,8 +70,13 @@ export default {
   color: var(--secondary-color);
 }
 
-.welcome-img {
+/* .welcome-img {
   width: 30%;
+  position: relative;
+} */
+
+.welcome-img {
+  background-image: url(../assets/hero-full.svg);
 }
 
 .welcome-text .socials {
@@ -107,5 +112,55 @@ export default {
 .welcome .socials svg {
   width: 25px;
   height: 25px;
+}
+
+@media screen and (max-width: 1225px) {
+  .welcome-text h1 {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  .welcome-text h1 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 1093px) {
+  .welcome-text h1 {
+    font-size: 4rem;
+  }
+
+  .welcome-text h5 {
+    font-size: x-large;
+  }  
+
+  .welcoming {
+    padding: 10% 90px 10%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .welcome-text h1 {
+    font-size: 4.5rem;
+  }
+
+  .welcome-img {
+    display: none;
+  }
+
+  .welcome-text .socials {
+    width: 70%;
+  }
+
+  .welcome-text h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .welcome-text h1 {
+    font-size: 3rem;
+  }
 }
 </style>
