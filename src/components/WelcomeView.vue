@@ -3,7 +3,7 @@
     <div class="welcoming">
       <div class="welcome-container">
         <div class="welcome-text">
-        <h1>HI, <span>Sha Nia</span> here!</h1>
+        <h1>HI, Sha Nia here!</h1>
         <h5>an iOS Developer who does design.</h5>
         <div class="socials">
           <a href="https://www.linkedin.com/in/shaniasiahaan/" target="_blank"><font-awesome-icon icon="fa-brands fa-linkedin-in" size="2x" /></a>
@@ -13,7 +13,7 @@
         </div>
       </div>
       <div class="welcome-img">
-        <img src="../assets/hero-full.svg" alt="person waving">
+        <!-- <img src="../assets/hero-full.svg" alt="person waving"> -->
       </div>
       </div>
     </div>
