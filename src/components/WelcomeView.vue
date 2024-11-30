@@ -114,7 +114,9 @@ export default {
   height: 25px;
 }
 
-@media screen and (max-width: 1225px) {
+
+
+/* @media screen and (max-width: 1225px) {
   .welcome-text h1 {
     font-size: 5rem;
   }
@@ -162,5 +164,5 @@ export default {
   .welcome-text h1 {
     font-size: 3rem;
   }
-}
+} */
 </style>
