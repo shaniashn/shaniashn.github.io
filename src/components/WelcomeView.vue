@@ -13,8 +13,11 @@
         </div>
       </div>
       <div class="welcome-img">
-        <!-- <img src="../assets/hero-full.svg" alt="person waving"> -->
+        <img src="../assets/hero-full.svg" alt="person waving">
       </div>
+      <!-- <div class="welcome-img-mobile">
+        <img src="../assets/mobile-char-full.svg" alt="person waving">
+      </div> -->
       </div>
     </div>
   </section>
@@ -33,35 +36,44 @@ export default {
 
 <style scoped>
 .welcome {
-  height: max-content;
-  position: relative;
-}
-
-.welcome-container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  /* height: max-content; */
+  
+  /* position: relative; */
+  background-color: aqua;
 }
 
 .welcoming {
-  position: relative;
+  height: 100vh;
+  max-width: 100%;
+  display: grid;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* position: relative;
   text-align: left;
-  padding: 10% 120px 10%;
+  padding: 10% 120px 10%; */
+}
+
+ .welcome-container {
+  max-width: 100%;
+  display: flex;
+  /* display: grid; */
+  align-items: center;
+  justify-content: space-around;
+  border: 2px solid blue;
+  /* margin: 25%; */
+
 }
 
 .welcome-text {
   line-height: 0%;
+  text-align: start;
 }
 
 .welcome-text h1 {
-  width: 100%;
-  font-size: 5.5rem;
+  /* width: 100%; */
+  font-size: 5rem;
   font-weight: 800;
-  color: var(--secondary-color);
-}
-
-.welcome-text h1 span {
   color: var(--secondary-color);
 }
 
@@ -70,28 +82,34 @@ export default {
   color: var(--secondary-color);
 }
 
-/* .welcome-img {
-  width: 30%;
-  position: relative;
-} */
-
 .welcome-img {
-  background-image: url(../assets/hero-full.svg);
+  width: 25%;
+  padding-top: 10%;
+  position: relative;
 }
 
+/* .welcome-img-mobile {
+  display: none;
+} */
+
 .welcome-text .socials {
-  width: 50%;
+  max-width: 100%;
+  /* width: 50%; */
   height: fit-content;
   display: flex;
-  justify-content: space-between;
+  gap: 5%;
+  /* justify-content: space-between; */
+  
 }
 
 .welcome-text .socials a {
   background-color: var(--secondary-color);
-  padding: 15px;
+  /* padding: 15px; */
+  padding: 3%;
   text-align: center;
   border-radius: 50%;
 }
+
 
 .welcome-text .socials a:nth-child(1) {
   color: var(--blue-color);
@@ -110,11 +128,75 @@ export default {
 }
 
 .welcome .socials svg {
-  width: 25px;
-  height: 25px;
+  /* max-width: 80%; */
+  /* height: 25px; */
+  aspect-ratio: 1/1;
 }
 
+@media screen and (max-width: 375px) {
+  .welcome-img {
+    display: none;
+  }
 
+  .welcome-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .welcome-text h5 {
+    font-size: 1.1rem;
+  }
+
+  .welcome-text .socials {
+    max-width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+  }
+
+  .welcome-text .socials a {
+    background-color: var(--secondary-color);
+    padding: 4%;
+    text-align: center;
+    border-radius: 50%;
+    /* aspect-ratio: 1/1; */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .welcome-container {
+    padding: 5%;
+  }
+
+  /* .welcome-text {
+    line-height: 2.5;
+  } */
+
+  .welcome-text h1 {
+    /* margin: 0; */
+    font-size: 2.5rem;
+  }
+
+  .welcome-text h5 {
+    /* margin: 0; */
+    font-size: large;
+  }
+
+  .welcome-text .socials {
+    display: flex;
+    gap: 5%;
+  }
+
+  .welcome .socials svg {
+    /* max-width: 80%; */
+    /* height: 25px; */
+    aspect-ratio: 1/1;
+  }
+
+  .welcome-img {
+    max-width: 25%;
+  }
+}
 
 /* @media screen and (max-width: 1225px) {
   .welcome-text h1 {
