@@ -3,21 +3,28 @@
     <div class="welcoming">
       <div class="welcome-container">
         <div class="welcome-text">
-        <h1>HI, Sha Nia here!</h1>
-        <h5>an iOS Developer who does design.</h5>
-        <div class="socials">
-          <a href="https://www.linkedin.com/in/shaniasiahaan/" target="_blank"><font-awesome-icon icon="fa-brands fa-linkedin-in" size="2x" /></a>
-          <a href="https://github.com/shaniashn" target="_blank"><font-awesome-icon icon="fa-brands fa-github" size="2x" /></a>
-          <a href="https://dribbble.com/shaniashn" target="_blank"><font-awesome-icon icon="fa-brands fa-dribbble" size="2x" /></a>
-          <a href="https://drive.google.com/file/d/15Kw_gHj2kTkWmNSRBQf3AkllipPXEJVU/view?usp=drive_link" target="_blank"><font-awesome-icon icon="fa-regular fa-file" size="2x" /></a>
+          <div class="txt">
+            <h1>HI, Sha Nia here!</h1>
+            <h5>an iOS Developer who does design.</h5>
+          </div>
+          <div class="socials">
+            <a href="https://www.linkedin.com/in/shaniasiahaan/" target="_blank"><font-awesome-icon
+                icon="fa-brands fa-linkedin-in" size="2x" /></a>
+            <a href="https://github.com/shaniashn" target="_blank"><font-awesome-icon icon="fa-brands fa-github"
+                size="2x" /></a>
+            <a href="https://dribbble.com/shaniashn" target="_blank"><font-awesome-icon icon="fa-brands fa-dribbble"
+                size="2x" /></a>
+            <a href="https://drive.google.com/file/d/15Kw_gHj2kTkWmNSRBQf3AkllipPXEJVU/view?usp=drive_link"
+              target="_blank"><font-awesome-icon icon="fa-regular fa-file" size="2x" /></a>
+          </div>
         </div>
-      </div>
-      <div class="welcome-img">
-        <img src="../assets/hero-full.svg" alt="person waving">
-      </div>
-      <!-- <div class="welcome-img-mobile">
-        <img src="../assets/mobile-char-full.svg" alt="person waving">
-      </div> -->
+        <div class="welcome-img">
+          <img src="../assets/hero-full.svg" alt="person waving">
+          <img src="../assets/mobile-char-full.svg" alt="person waving">
+        </div>
+        <div class="welcome-img-mobile">
+          
+        </div>
       </div>
     </div>
   </section>
@@ -66,20 +73,29 @@ export default {
 }
 
 .welcome-text {
-  line-height: 0%;
+  /* line-height: 0%; */
   text-align: start;
+}
+
+.txt {
+  margin-bottom: 5%;
+  padding: 0;
 }
 
 .welcome-text h1 {
   /* width: 100%; */
   font-size: 5rem;
   font-weight: 800;
+  margin: 0;
+  padding: 0;
   color: var(--secondary-color);
 }
 
 .welcome-text h5 {
   font-size: xx-large;
   color: var(--secondary-color);
+  margin: 0;
+  padding: 0;
 }
 
 .welcome-img {
@@ -94,8 +110,8 @@ export default {
 
 .welcome-text .socials {
   max-width: 100%;
-  /* width: 50%; */
-  height: fit-content;
+  width: 50%;
+  /* height: fit-content; */
   display: flex;
   gap: 5%;
   /* justify-content: space-between; */
@@ -105,8 +121,8 @@ export default {
 .welcome-text .socials a {
   background-color: var(--secondary-color);
   /* padding: 15px; */
-  padding: 3%;
-  text-align: center;
+  padding: 5%;
+  /* text-align: center; */
   border-radius: 50%;
 }
 
@@ -129,15 +145,12 @@ export default {
 
 .welcome .socials svg {
   /* max-width: 80%; */
-  /* height: 25px; */
+  width: 25px;
+  height: 25px;
   aspect-ratio: 1/1;
 }
 
 @media screen and (max-width: 375px) {
-  .welcome-img {
-    display: none;
-  }
-
   .welcome-text h1 {
     font-size: 2.5rem;
   }
@@ -164,7 +177,25 @@ export default {
 }
 
 @media screen and (max-width: 576px) {
+  .welcoming {
+    height: auto;
+    padding: 25% 0;
+  }
+
+  /* .welcome-container {
+    height: auto;
+  } */
+
+  /* .welcome-img { */
+    /* display: none; */
+  /* } */
+
+  /* .welcome-img-mobile {
+  display: none;
+} */
+
   .welcome-container {
+    display: grid;
     padding: 5%;
   }
 
@@ -173,28 +204,34 @@ export default {
   } */
 
   .welcome-text h1 {
-    /* margin: 0; */
+    margin: 0;
     font-size: 2.5rem;
   }
 
   .welcome-text h5 {
-    /* margin: 0; */
+    margin: 0;
     font-size: large;
   }
 
   .welcome-text .socials {
+    /* width: 100%;
     display: flex;
-    gap: 5%;
+    gap: 5%; */
   }
 
   .welcome .socials svg {
     /* max-width: 80%; */
     /* height: 25px; */
-    aspect-ratio: 1/1;
+    /* aspect-ratio: 1/1; */
+  }
+
+  .welcome-img img:first-child{
+    display: none;
   }
 
   .welcome-img {
-    max-width: 25%;
+    width: 100%;
+    /* display: none; */
   }
 }
 
