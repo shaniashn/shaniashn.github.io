@@ -4,7 +4,7 @@
       <div class="welcome-container">
         <div class="welcome-text">
           <div class="txt">
-            <h1>HI, Sha Nia here!</h1>
+            <h1>HI, <span>Sha Nia here!</span></h1>
             <h5>an iOS Developer who does design.</h5>
           </div>
           <div class="socials">
@@ -104,9 +104,9 @@ export default {
   position: relative;
 }
 
-/* .welcome-img-mobile {
+.welcome-img img:last-child {
   display: none;
-} */
+}
 
 .welcome-text .socials {
   max-width: 100%;
@@ -151,8 +151,13 @@ export default {
 }
 
 @media screen and (max-width: 375px) {
+
   .welcome-text h1 {
     font-size: 2.5rem;
+  }
+
+  .welcome-text h1 span{
+    display: block;
   }
 
   .welcome-text h5 {
@@ -182,6 +187,10 @@ export default {
     padding: 25% 0;
   }
 
+  .txt {
+    text-align: center;
+  }
+
   /* .welcome-container {
     height: auto;
   } */
@@ -205,15 +214,17 @@ export default {
 
   .welcome-text h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
 
   .welcome-text h5 {
     margin: 0;
-    font-size: large;
+    font-size: x-large;
   }
 
   .welcome-text .socials {
+    width: 100%;
+    justify-content: center;
     /* width: 100%;
     display: flex;
     gap: 5%; */
@@ -232,6 +243,12 @@ export default {
   .welcome-img {
     width: 100%;
     /* display: none; */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .welcome-img img:last-child{
+    display: none;
   }
 }
 
