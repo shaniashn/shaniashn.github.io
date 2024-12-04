@@ -46,7 +46,7 @@ export default {
   /* height: max-content; */
   
   /* position: relative; */
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 .welcoming {
@@ -66,8 +66,8 @@ export default {
   display: flex;
   /* display: grid; */
   align-items: center;
-  justify-content: space-around;
-  border: 2px solid blue;
+  justify-content: space-between;
+  /* border: 2px solid blue; */
   /* margin: 25%; */
 
 }
@@ -250,55 +250,8 @@ export default {
   .welcome-img img:last-child{
     display: none;
   }
+
+
 }
 
-/* @media screen and (max-width: 1225px) {
-  .welcome-text h1 {
-    font-size: 5rem;
-  }
-}
-
-@media screen and (max-width: 1140px) {
-  .welcome-text h1 {
-    font-size: 4rem;
-  }
-}
-
-@media screen and (max-width: 1093px) {
-  .welcome-text h1 {
-    font-size: 4rem;
-  }
-
-  .welcome-text h5 {
-    font-size: x-large;
-  }  
-
-  .welcoming {
-    padding: 10% 90px 10%;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .welcome-text h1 {
-    font-size: 4.5rem;
-  }
-
-  .welcome-img {
-    display: none;
-  }
-
-  .welcome-text .socials {
-    width: 70%;
-  }
-
-  .welcome-text h1 {
-    font-size: 3.5rem;
-  }
-}
-
-@media screen and (max-width: 620px) {
-  .welcome-text h1 {
-    font-size: 3rem;
-  }
-} */
 </style>
