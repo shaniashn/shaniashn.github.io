@@ -223,7 +223,7 @@ export default {
   }
 
   .welcome-container {
-    display: grid;
+    display: block;
     padding: 5%;
   }
 
