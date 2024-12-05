@@ -22,9 +22,6 @@
           <img src="../assets/hero-full.svg" alt="person waving">
           <img src="../assets/mobile-char-full.svg" alt="person waving">
         </div>
-        <div class="welcome-img-mobile">
-          
-        </div>
       </div>
     </div>
   </section>
@@ -64,6 +61,7 @@ export default {
  .welcome-container {
   max-width: 100%;
   display: flex;
+  padding: 0 10%;
   /* display: grid; */
   align-items: center;
   justify-content: space-between;
@@ -99,7 +97,8 @@ export default {
 }
 
 .welcome-img {
-  width: 25%;
+  width: 30%;
+  min-width: 20%;
   padding-top: 10%;
   position: relative;
 }
