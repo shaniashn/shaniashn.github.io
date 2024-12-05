@@ -22,9 +22,6 @@
           <img src="../assets/hero-full.svg" alt="person waving">
           <img src="../assets/mobile-char-full.svg" alt="person waving">
         </div>
-        <div class="welcome-img-mobile">
-          
-        </div>
       </div>
     </div>
   </section>
@@ -46,7 +43,7 @@ export default {
   /* height: max-content; */
   
   /* position: relative; */
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 .welcoming {
@@ -67,7 +64,7 @@ export default {
   /* display: grid; */
   align-items: center;
   justify-content: space-around;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   /* margin: 25%; */
 
 }
@@ -208,9 +205,11 @@ export default {
     padding: 5%;
   }
 
-  /* .welcome-text {
-    line-height: 2.5;
-  } */
+  .welcome-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   .welcome-text h1 {
     margin: 0;
@@ -223,7 +222,7 @@ export default {
   }
 
   .welcome-text .socials {
-    width: 100%;
+    max-width: 50%;
     justify-content: center;
     /* width: 100%;
     display: flex;
@@ -240,13 +239,18 @@ export default {
     display: none;
   }
 
+  .welcome-img img:last-child{
+    padding-top: 10%;
+    display: block;
+  }
+
   .welcome-img {
     width: 100%;
     /* display: none; */
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .welcome-img img:last-child{
     display: none;
   }
