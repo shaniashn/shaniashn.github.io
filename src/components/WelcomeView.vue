@@ -356,12 +356,12 @@ export default {
   } */
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .welcome-img img:last-child{
     display: none;
   }
 
 
-}
+} */
 
 </style>
