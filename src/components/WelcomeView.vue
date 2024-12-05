@@ -183,7 +183,6 @@ export default {
   }
 
   .welcome-text .socials {
-    max-width: 100%;
     max-width: 50%;
     height: fit-content;
     display: flex;
