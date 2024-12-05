@@ -150,6 +150,25 @@ export default {
 }
 
 @media screen and (max-width: 375px) {
+  .welcoming {
+    height: auto;
+    padding: 25% 0;
+  }
+
+  .txt {
+    text-align: center;
+  }
+
+  .welcome-container {
+    display: grid;
+    padding: 5%;
+  }
+
+  .welcome-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   .welcome-text h1 {
     font-size: 2.5rem;
@@ -165,6 +184,7 @@ export default {
 
   .welcome-text .socials {
     max-width: 100%;
+    max-width: 50%;
     height: fit-content;
     display: flex;
     justify-content: center;
@@ -177,6 +197,19 @@ export default {
     text-align: center;
     border-radius: 50%;
     /* aspect-ratio: 1/1; */
+  }
+
+  .welcome-img img:first-child{
+    display: none;
+  }
+
+  .welcome-img img:last-child{
+    padding-top: 10%;
+    display: block;
+  }
+
+  .welcome-img {
+    width: 100%;
   }
 }
 
