@@ -263,38 +263,24 @@ export default {
     text-align: start;
   }
 
-@media screen and (min-width: 576px) {
-  /* .welcome-container {
-    display: grid;
-    padding: 5%;
-  } */
-
-  /* .welcome-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  } */
-
-  /* .welcome-img img:first-child{
-    display: none;
-  } */
-
-  /* .welcome-img img:last-child{
-    padding-top: 10%;
-    display: block;
-  } */
-
-  /* .welcome-img {
-    width: 100%;
-  } */
-}
-
-/* @media screen and (max-width: 768px) {
-  .welcome-img img:last-child{
-    display: none;
+  .welcome-text h1 {
+    margin: 0;
+    font-size: 5rem;
   }
 
+  .welcome-text h5 {
+    margin: 0;
+    font-size: xx-large;
+  }
 
-} */
+  .welcome-text .socials {
+    justify-content: flex-start;
+  }
+
+  /* .welcome-img img:last-child{
+    display: block;
+    margin: 0 16%;
+  } */
+}
 
 </style>
