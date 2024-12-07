@@ -39,39 +39,22 @@ export default {
 </script>
 
 <style scoped>
-.welcome {
-  /* height: max-content; */
-  
-  /* position: relative; */
-  /* background-color: aqua; */
-}
-
 .welcoming {
   height: 100vh;
   max-width: 100%;
   display: grid;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* position: relative;
-  text-align: left;
-  padding: 10% 120px 10%; */
 }
 
  .welcome-container {
   max-width: 100%;
   display: flex;
   padding: 0 10%;
-  /* display: grid; */
   align-items: center;
   justify-content: space-between;
-  /* border: 2px solid blue; */
-  /* margin: 25%; */
 
 }
 
 .welcome-text {
-  /* line-height: 0%; */
   text-align: start;
 }
 
@@ -81,7 +64,6 @@ export default {
 }
 
 .welcome-text h1 {
-  /* width: 100%; */
   font-size: 5rem;
   font-weight: 800;
   margin: 0;
@@ -110,18 +92,13 @@ export default {
 .welcome-text .socials {
   max-width: 100%;
   width: 50%;
-  /* height: fit-content; */
   display: flex;
   gap: 5%;
-  /* justify-content: space-between; */
-  
 }
 
 .welcome-text .socials a {
   background-color: var(--secondary-color);
-  /* padding: 15px; */
   padding: 5%;
-  /* text-align: center; */
   border-radius: 50%;
 }
 
@@ -143,7 +120,6 @@ export default {
 }
 
 .welcome .socials svg {
-  /* max-width: 80%; */
   width: 25px;
   height: 25px;
   aspect-ratio: 1/1;
@@ -155,12 +131,9 @@ export default {
     padding: 25% 0;
   }
 
-  .txt {
-    text-align: center;
-  }
-
   .welcome-container {
     display: grid;
+    justify-content: center;
     padding: 5%;
   }
 
@@ -168,6 +141,10 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .txt {
+    text-align: center;
   }
 
   .welcome-text h1 {
@@ -195,7 +172,6 @@ export default {
     padding: 4%;
     text-align: center;
     border-radius: 50%;
-    /* aspect-ratio: 1/1; */
   }
 
   .welcome-img img:first-child{
@@ -205,7 +181,7 @@ export default {
   .welcome-img img:last-child{
     padding-top: 10%;
     display: block;
-  }
+  } 
 
   .welcome-img {
     width: 100%;
@@ -246,18 +222,16 @@ export default {
   .welcome-text .socials {
     max-width: 50%;
     justify-content: center;
-    /* width: 100%;
-    display: flex;
-    gap: 5%; */
   }
 
-  .welcome-img img:first-child{
+  /* .welcome-img img:first-child{
     display: none;
   }
 
   .welcome-img img:last-child{
     padding-top: 10%;
     display: block;
+    margin: 5%;
   }
 
   .welcome-img {
@@ -274,6 +248,7 @@ export default {
   /* .txt {
     text-align: center;
   } */
+}
 
   /* .welcome-container {
     height: auto;
