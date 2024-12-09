@@ -224,7 +224,7 @@ export default {
     justify-content: center;
   }
 
-  /* .welcome-img img:first-child{
+  .welcome-img img:first-child{
     display: none;
   }
 
@@ -236,7 +236,7 @@ export default {
 
   .welcome-img {
     width: 100%;
-  } */
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -265,7 +265,7 @@ export default {
 
   .welcome-text h1 {
     margin: 0;
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   .welcome-text h5 {
@@ -277,10 +277,20 @@ export default {
     justify-content: flex-start;
   }
 
-  /* .welcome-img img:last-child{
+  .welcome-img img:last-child {
+    display: none;
+  } 
+
+  .welcome-img img:first-child{
     display: block;
-    margin: 0 16%;
-  } */
+  }
+
+  .welcome-img {
+    width: 40%;
+    max-width: 30%;
+    padding-top: 10%;
+    position: relative;
+  }
 }
 
 </style>
