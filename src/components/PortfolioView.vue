@@ -142,8 +142,6 @@ export default {
 
 <style>
 .portfolio {
-  /* height: max-content; */
-  /* height: 100vh; */
   padding: 10%;
 }
 
@@ -201,7 +199,7 @@ export default {
   width: 100vw;
   /* padding: 70px 0; */
   padding: 8% 5%;
-  background-color: khaki;
+  /* background-color: khaki; */
 }
 
 .detail-view .detail-image {
@@ -273,8 +271,63 @@ export default {
   border-radius: 75pt;
 }
 
+@media screen and (min-width: 375px) {
+  .arrows {
+    display: none;
+  }
+
+  .detail-view {
+    padding: 0 11%;
+    flex-direction: column;
+  }
+
+  .portfolio-bar {
+    margin-bottom: 10%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .portfolio {
+    padding: 0
+  }
+
+  .portfolio-bar ul {
+    width: 100%;
+  }
+
+  .portfolio-bar ul li {
+    padding: 0 5px;
+  }
+
+  .detail-view {
+    padding: 5% 11%;
+    flex-direction: column;
+  }
+
+
+}
+
+@media screen and (max-width: 576px) {
+  .detail-view {
+    flex-direction: column;
+  }
+
+  
+}
+
+@media screen and (min-width: 768px) {
+  .detail-view {
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .portfolio {
+    padding: 8%;
+  }
+}
+
 /* @media screen and (max-width: 1031px) { */
-@media screen and (max-width: 1150px) {
+/* @media screen and (max-width: 1150px) {
   .detail-view {
     padding: 5% 11%;
     flex-direction: column;
@@ -286,5 +339,5 @@ export default {
     justify-content: space-between;
     transform: none;
   }
-}
+} */
 </style>
