@@ -185,7 +185,6 @@ export default {
 }
 
 .detail-container {
-  /* width: max-content; */
   display: flex;
   flex-direction: row;
   overflow: auto;
@@ -207,7 +206,6 @@ export default {
 
 .detail-view .detail-image img {
   width: 100%;
-  /* border: c; */
 }
 
 .detail-view .detail-description {
@@ -215,8 +213,6 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   text-align: left;
-  width: 100%;
-  /* background-color: blanchedalmond; */
   height: 100%;
   padding-block: 30px 0;
   box-sizing: border-box;
@@ -265,7 +261,6 @@ export default {
   border-radius: 75pt;
 }
 
-/* @media screen and (max-width: 1031px) { */
 @media screen and (min-width: 375px) {
   .arrows {
     display: none;
@@ -304,15 +299,27 @@ export default {
 
 @media screen and (min-width: 768px) {
   .detail-view {
-    flex-direction: row;
+    flex-direction: column;
     padding: 0 5%;
   }
   .portfolio {
     padding: 8%;
   }
 
+  .detail-image img {
+    max-width: 90%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .detail-view {
+    flex-direction: row;
+    padding: 0 2%;
+  }
+
   .arrows {
     display: block;
   }
 }
+
 </style>
