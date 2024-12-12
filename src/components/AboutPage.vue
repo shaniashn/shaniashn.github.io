@@ -205,6 +205,16 @@ export default {
   }
 }
 
+@media screen and (min-width: 576px) {
+  .about-img {
+    max-width: 60%;
+  }
+
+  .about-view-container {
+    padding: 0 5%;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .about-view {
     gap: 5%;
