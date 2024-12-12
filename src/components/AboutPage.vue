@@ -64,7 +64,6 @@ export default {
 <style>
 .about {
   height: max-content;
-  /* height: 100vh; */
   padding: 8%;
 }
 
@@ -102,9 +101,19 @@ export default {
   /* background-color: blueviolet; */
   display: flex;
   justify-content: space-evenly;
-  padding: 20px 60px;
-  box-sizing: border-box;
+  align-items: center;
+  /* padding: 20px 60px; */
+  /* box-sizing: border-box; */
   /* height: 70vh; */
+}
+
+.about-img {
+  max-width: 30%;
+}
+
+.about-img img {
+  max-width: 100%;
+  border: 5px solid var(--blue-color);
 }
 
 /* .about-img {
@@ -116,15 +125,15 @@ export default {
   padding: 50px;
 } */
 
-.about-view .about-img img{
+/* .about-view .about-img img{
   width: 380px;
   border: 5px solid var(--blue-color);
   margin: 5% 0;
-}
+} */
 
 .about-desc {
-  width: 40%;
-  display: grid;
+  max-width: 60%;
+  /* display: grid; */
 }
 
 .about-desc p {
@@ -137,7 +146,7 @@ export default {
   font-size: 20px;
 } */
 
-@media screen and (max-width: 795px) {
+/* @media screen and (max-width: 795px) {
   .about-view {
     flex-direction: column;
   }
@@ -145,10 +154,16 @@ export default {
   .about-desc {
     width: 100%;
   }
-}
 
-.about-view .about-img img{
-  width: 300px;
-}
 
+  .about-view .about-img img{
+    width: 300px;
+  }
+} */
+
+@media screen and (min-width: 992px) {
+  .about-view {
+    gap: 5%;
+  }
+}
 </style>

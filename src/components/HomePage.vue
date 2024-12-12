@@ -1,8 +1,8 @@
 <template>
   <WelcomeView />
   <PortfolioView />
-  <!-- 
   <AboutPage />
+  <!-- 
   <FooterView /> -->
   <Nav />
 </template>
@@ -10,7 +10,7 @@
 <script>
 import Nav from './NavigationBar.vue';
 import PortfolioView from './PortfolioView.vue';
-// import AboutPage from './AboutPage.vue';
+import AboutPage from './AboutPage.vue';
 import WelcomeView from './WelcomeView.vue';
 // import FooterView from './FooterView.vue';
 
@@ -19,7 +19,7 @@ export default {
   components: {
     Nav,
     PortfolioView,
-    // AboutPage,
+    AboutPage,
     WelcomeView,
     // FooterView
   }
