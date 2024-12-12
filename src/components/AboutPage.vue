@@ -187,6 +187,24 @@ export default {
 
 }
 
+@media screen and (min-width: 375px) {
+  .about-view {
+    flex-direction: column;
+  }
+
+  .about-img {
+    max-width: 100%;
+  }
+
+  .about-desc {
+    max-width: 100%;
+  }
+
+  .about-view-container {
+    padding: 0 11%;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .about-view {
     gap: 5%;
