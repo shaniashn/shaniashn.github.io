@@ -219,5 +219,13 @@ export default {
   .about-view {
     gap: 5%;
   }
+
+  .about-view {
+    flex-direction: row;;
+  }
+
+  .about-img {
+    max-width: 30%;
+  }
 }
 </style>
