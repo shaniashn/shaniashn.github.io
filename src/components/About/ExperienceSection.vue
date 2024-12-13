@@ -77,7 +77,6 @@ export default {
 .item p:first-child {
   font-weight: 500;
   font-size: larger;
-  line-height: 0pc;
 }
 
 .flower {
@@ -130,5 +129,19 @@ export default {
 
 .achievement h5 {
   color: var(--pink-color);
+}
+
+@media screen and (max-width: 375px) {
+  .experience-achievement {
+    display: block;
+  }
+  
+  .experience {
+    display: block;
+  }
+
+  .abt-img img:last-child{
+    display: none;
+  }
 }
 </style>
