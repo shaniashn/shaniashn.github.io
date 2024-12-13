@@ -64,9 +64,9 @@ export default {
   text-align: left;
   width: 100%;
   height: 70vh;
-  /* background-color: burlywood; */
   justify-content: space-evenly;
   align-items: flex-start;
+  font-size: 1.1rem;
 }
 
 .item img{
@@ -145,6 +145,29 @@ export default {
 */
   .abt-img img:last-child{
     max-width: 100%;
+    padding: 10% 0;
+    position: absolute;
+    left: 0;
+    right: 0;
   } 
+}
+
+@media screen and (min-width: 376px) {
+  .experience-achievement {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .abt-img img:last-child{
+    max-width: 100%;
+    padding: 10% 0;
+  } 
+
+}
+
+@media screen and (min-width: 992px) {
+  .experience-achievement {
+    flex-direction: row;
+  }
 }
 </style>
