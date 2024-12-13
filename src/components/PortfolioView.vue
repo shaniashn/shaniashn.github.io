@@ -143,6 +143,7 @@ export default {
 <style>
 .portfolio {
   padding: 10%;
+  font-size: 1.1rem;
 }
 
 .portfolio-title {
@@ -229,7 +230,7 @@ export default {
 }
 
 .detail-desc p {
-  font-size: 1.1em;
+  /* font-size: 1.1em; */
   font-weight: 500;
 }
 
