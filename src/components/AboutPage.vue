@@ -170,7 +170,7 @@ export default {
 
 @media screen and (max-width: 375px) {
   .about-container {
-    padding: 0 5%;
+    padding: 0;
   }
 
   .about-img {
@@ -182,6 +182,10 @@ export default {
   }
 
   .about-desc {
+    max-width: 100%;
+  }
+
+  .abt-img img:last-child {
     max-width: 100%;
   }
 
@@ -201,7 +205,7 @@ export default {
   }
 
   .about-view-container {
-    padding: 0 11%;
+    padding: 0 5%;
   }
 }
 
