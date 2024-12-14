@@ -64,9 +64,9 @@ export default {
   text-align: left;
   width: 100%;
   height: 70vh;
-  /* background-color: burlywood; */
   justify-content: space-evenly;
   align-items: flex-start;
+  font-size: 1.1rem;
 }
 
 .item img{
@@ -77,7 +77,6 @@ export default {
 .item p:first-child {
   font-weight: 500;
   font-size: larger;
-  line-height: 0pc;
 }
 
 .flower {
@@ -91,14 +90,14 @@ export default {
 }
 
 .experience {
-  display: grid;
+  /* display: grid; */
   /* background-color: aquamarine; */
   gap: 5%;
   height: max-content;
 }
 
 .abt-img {
-  display: grid;
+  /* display: grid; */
   justify-content: space-around;
   /* background-color: aqua; */
   gap: 40%;
@@ -113,7 +112,7 @@ export default {
 }
 
 .achievement {
-  display: grid;
+  /* display: grid; */
   justify-content: space-around;
   /* background-color: beige; */
   gap: 5%;
@@ -130,5 +129,45 @@ export default {
 
 .achievement h5 {
   color: var(--pink-color);
+}
+
+@media screen and (max-width: 375px) {
+  .experience-achievement {
+    display: block;
+  }
+  /* .experience-achievement {
+    display: block;
+  }
+  
+  .experience {
+    display: block;
+  }
+*/
+  .abt-img img:last-child{
+    max-width: 100%;
+    padding: 10% 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+  } 
+}
+
+@media screen and (min-width: 376px) {
+  .experience-achievement {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .abt-img img:last-child{
+    max-width: 100%;
+    padding: 10% 0;
+  } 
+
+}
+
+@media screen and (min-width: 992px) {
+  .experience-achievement {
+    flex-direction: row;
+  }
 }
 </style>

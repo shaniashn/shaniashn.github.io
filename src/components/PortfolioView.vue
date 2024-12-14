@@ -142,9 +142,8 @@ export default {
 
 <style>
 .portfolio {
-  /* height: max-content; */
-  /* height: 100vh; */
   padding: 10%;
+  font-size: 1.1rem;
 }
 
 .portfolio-title {
@@ -187,7 +186,6 @@ export default {
 }
 
 .detail-container {
-  /* width: max-content; */
   display: flex;
   flex-direction: row;
   overflow: auto;
@@ -199,9 +197,7 @@ export default {
   justify-self: space-evenly;
   align-items: center;
   width: 100vw;
-  /* padding: 70px 0; */
   padding: 8% 5%;
-  background-color: khaki;
 }
 
 .detail-view .detail-image {
@@ -211,7 +207,6 @@ export default {
 
 .detail-view .detail-image img {
   width: 100%;
-  /* border: c; */
 }
 
 .detail-view .detail-description {
@@ -219,8 +214,6 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   text-align: left;
-  width: 100%;
-  /* background-color: blanchedalmond; */
   height: 100%;
   padding-block: 30px 0;
   box-sizing: border-box;
@@ -237,7 +230,7 @@ export default {
 }
 
 .detail-desc p {
-  font-size: 1.1em;
+  /* font-size: 1.1em; */
   font-weight: 500;
 }
 
@@ -259,10 +252,6 @@ export default {
   width: 100%;
 } */
 
-.arrows {
-  background-color: antiquewhite;
-}
-
 .arrows svg {
   width: 25px;
   height: 25px;
@@ -273,18 +262,65 @@ export default {
   border-radius: 75pt;
 }
 
-/* @media screen and (max-width: 1031px) { */
-@media screen and (max-width: 1150px) {
+@media screen and (min-width: 375px) {
+  .arrows {
+    display: none;
+  }
+
+  .detail-view {
+    padding: 0 11%;
+    flex-direction: column;
+  }
+  .portfolio-bar {
+    margin-bottom: 10%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .portfolio {
+    padding: 0
+  }
+  .portfolio-bar ul {
+    width: 100%;
+  }
+  .portfolio-bar ul li {
+    padding: 0 5px;
+  }
   .detail-view {
     padding: 5% 11%;
     flex-direction: column;
   }
+}
 
-  .arrows {
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: space-between;
-    transform: none;
+@media screen and (max-width: 576px) {
+  .detail-view {
+    flex-direction: column;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .detail-view {
+    flex-direction: column;
+    padding: 0 5%;
+  }
+  .portfolio {
+    padding: 8%;
+  }
+
+  .detail-image img {
+    max-width: 90%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .detail-view {
+    flex-direction: row;
+    padding: 0 2%;
+  }
+
+  .arrows {
+    display: block;
+  }
+}
+
 </style>
