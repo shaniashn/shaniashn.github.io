@@ -6,7 +6,7 @@
           shania.shn
         </a>
       </ul>
-      <ul>
+      <ul class="menus">
         <font-awesome-icon icon="fa-solid fa-bars" size="2x" v-show="!showMenu" @click="toggleMenu"/>
         <font-awesome-icon icon="fa-solid fa-xmark" size="2x" v-show="showMenu" @click="toggleMenu"/>
         
@@ -36,7 +36,21 @@ export default {
     toggleMenu() {
       return this.showMenu = !this.showMenu
     }
-  }
+  },
+  watch: {
+    showMenu(newValue){
+      const menuBar = document.querySelector('.menus');
+      if(newValue) {
+        menuBar.classList.add('mobile');
+      }
+      else {
+        console.log("close");
+        menuBar.classList.remove('mobile');
+        
+      }
+
+    }
+  },
 }
 </script>
 
@@ -110,6 +124,20 @@ nav ul:last-child svg {
   display: none;
 }
 
+.mobile {
+  background-color: var(--lightgreen-color);
+  width: 100%;
+  right: 0;
+  flex-direction: column;
+  display: block;
+  height: max-content;
+}
+
+.mobile .fa-xmark {
+  justify-self: end;
+  padding: 2%;
+}
+
 @media screen and (max-width: 769px) {
 
   nav ul:last-child {
@@ -133,6 +161,7 @@ nav ul:last-child svg {
 
   nav ul:last-child a{
     padding: 3%;
+    justify-content: center;
   }
 
   nav ul:last-child svg:first-child {
