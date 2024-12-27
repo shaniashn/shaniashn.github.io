@@ -1,6 +1,6 @@
 //import components here and create routes
 import HomePage from './components/HomePage.vue';
-import { createRouter, createWebHashHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [ //array of objects
   {
@@ -11,7 +11,7 @@ const routes = [ //array of objects
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes
 });
 
