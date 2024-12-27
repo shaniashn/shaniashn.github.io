@@ -309,6 +309,7 @@ export default {
 
   .detail-image img {
     max-width: 90%;
+    min-width: 50%
   }
 }
 
