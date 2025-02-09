@@ -6,9 +6,21 @@
           shania.shn
         </a>
       </ul>
-      <ul class="menus">
-        <font-awesome-icon icon="fa-solid fa-bars" size="2x" v-show="!showMenu" @click="toggleMenu"/>
-        <font-awesome-icon icon="fa-solid fa-xmark" size="2x" v-show="showMenu" @click="toggleMenu"/>
+      <ul class="menus" v-if="!isMobile">
+        <a href="#portfolio">
+          <li>projects</li>
+        </a>
+        <a href="#about">
+          <li>about</li>
+        </a>
+        <a href="https://read.cv/shaniashn" target="_blank">
+          <li>resume</li>
+        </a>
+      </ul>
+      <ul class="menus-nav" v-else>
+        <font-awesome-icon icon="fa-solid fa-xmark" size="2x" v-show="showMenu && isMobile" @click="toggleMenu"/>
+        <font-awesome-icon icon="fa-solid fa-bars" size="2x" v-show="!showMenu && isMobile" @click="toggleMenu"/>
+        
         
         <a href="#portfolio" v-show="showMenu">
           <li>projects</li>
@@ -29,27 +41,43 @@ export default {
   name: 'NavigationBar',
   data() {
     return {
-      showMenu: false
+      showMenu: false,
+      isMobile: false
     }
   },
   methods: {
     toggleMenu() {
       return this.showMenu = !this.showMenu
+    },
+    start(){
+      this.isMobile = document.body.clientWidth <= 768 ? true : false
     }
   },
   watch: {
-    showMenu(newValue){
-      const menuBar = document.querySelector('.menus');
+    showMenu(newValue, oldValue){
+      const menuBar = document.querySelector('.menus-nav');
+      
       if(newValue) {
+        console.log("newval", newValue);
+        
         menuBar.classList.add('mobile');
+        // document.querySelector(".menus").style.display = "none"
       }
-      else {
+      else if(oldValue){
         console.log("close");
         menuBar.classList.remove('mobile');
-        
+      }
+    },
+    isMobile(newValue){
+      if (newValue) {
+        document.querySelector(".menus").style.display = "none"
+        // this.showMenu = true
       }
     }
   },
+  mounted() {
+    this.start()
+  }
 }
 </script>
 
@@ -143,18 +171,14 @@ nav ul:last-child svg {
     width: 100%;
     right: 0%;
     flex-direction: column;
-    /* height: 200px; */
     justify-content: space-evenly;
-    /* padding-top: 20px; */
     align-items: center;
-    /* background-color: rgb(255, 248, 243, 0.5); */
-    /* backdrop-filter: blur(5px); */
   }
 
   nav ul:last-child svg {
     display: flex;
     width: 50px;
-    padding: 0 0 5% 0;
+    padding: 0 0 0 0;
     align-self: end;
   }
 
