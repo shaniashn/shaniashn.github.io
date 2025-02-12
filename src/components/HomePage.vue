@@ -27,7 +27,7 @@ export default {
 
 <style>
 .section {
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   scroll-snap-stop: always;
 }
 

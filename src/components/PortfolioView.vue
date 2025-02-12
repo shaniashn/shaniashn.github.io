@@ -1,4 +1,4 @@
-\<template>
+<template>
   <section class="portfolio" id="portfolio">
     <div class="portfolio-bar">
       <ul>
