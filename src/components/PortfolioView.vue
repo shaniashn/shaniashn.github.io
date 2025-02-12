@@ -203,6 +203,8 @@ export default {
 .detail-view .detail-image {
   flex-grow: 1;
   margin-right: 5%;
+  width: 100%;
+  min-width: 50%;
 }
 
 .detail-view .detail-image img {
