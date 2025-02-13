@@ -7,6 +7,9 @@
         </ul>
       </div>
       <div class="about-view-container">
+        <div class="about-view" v-if="showExp">
+          <ExperienceSection />
+        </div>
         <div class="about-view" v-if="showAbout">
           <div class="about-img">
             <img :src="profileImage" alt="shania">
@@ -23,12 +26,6 @@
             <p>Okay, a little bit TMI, I love K-Pop girlgroups especially Red Velvet, NewJeans and aespa.</p>
           </div>
         </div>
-        <div class="about-view" v-if="showExp">
-          <ExperienceSection />
-        </div>
-        <div class="about-view" v-if="showSkill">
-          <SkillsSection />
-        </div>
       </div>
     </div>
   </section>
@@ -38,22 +35,22 @@
 <script>
 import profileImg from '../assets/profile-img.png'
 import ExperienceSection from './About/ExperienceSection.vue';
-import SkillsSection from "./About/SkillsSection.vue";
+// import SkillsSection from "./About/SkillsSection.vue";
 
 export default {
   name: 'AboutPage',
   data() {
     return {
-      categories: ['about', 'experience & achievement', 'skills'],
+      categories: ['experience & achievement', 'about'],
       profileImage: profileImg,
-      showAbout: true,
-      showExp: false,
+      showAbout: false,
+      showExp: true,
       showSkill: false
     }
   },
   components: {
     ExperienceSection,
-    SkillsSection
+    // SkillsSection
   },
   methods: {
     selectCategory(index) {
