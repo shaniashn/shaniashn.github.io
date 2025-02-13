@@ -1,5 +1,6 @@
 <template>
-  <div class="experience-achievement">
+  <section class="experiences-about">
+    <div class="experience-achievement">
     <div class="experience">
       <h5>experience</h5>
       <div class="flower">
@@ -45,12 +46,18 @@
       <img src="../../assets/cat.svg">
     </div>
   </div>
+  <SkillsSection />
+  </section>
 </template>
 
 <script>
+import SkillsSection from './SkillsSection.vue';
 
 export default {
   name: 'ExperienceSec',
+  components: {
+    SkillsSection
+  },
   data() {
     return {
     }
@@ -59,12 +66,14 @@ export default {
 </script>
 
 <style scoped>
+.experiences-about {
+  width: 100%;
+}
+
 .experience-achievement {
   display: flex;
   text-align: left;
-  width: 100%;
-  height: 70vh;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: flex-start;
   font-size: 1.1rem;
 }
@@ -90,31 +99,22 @@ export default {
 }
 
 .experience {
-  /* display: grid; */
-  /* background-color: aquamarine; */
   gap: 5%;
   height: max-content;
 }
 
 .abt-img {
-  /* display: grid; */
   justify-content: space-around;
-  /* background-color: aqua; */
   gap: 40%;
-  /* height: 75%; */
-  /* grid-auto-flow: column; */
 }
 
 .abt-img img {
   width: 500px;
   height: auto;
-  /* margin-top: 50%; */
 }
 
 .achievement {
-  /* display: grid; */
   justify-content: space-around;
-  /* background-color: beige; */
   gap: 5%;
 }
 
@@ -135,14 +135,7 @@ export default {
   .experience-achievement {
     display: block;
   }
-  /* .experience-achievement {
-    display: block;
-  }
-  
-  .experience {
-    display: block;
-  }
-*/
+
   .abt-img img:last-child{
     max-width: 100%;
     padding: 10% 0;
