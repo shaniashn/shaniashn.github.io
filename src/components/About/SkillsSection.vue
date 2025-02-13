@@ -1,5 +1,6 @@
 <template>
   <div class="skills">
+    <h5>skills</h5>
     <div class="grid">
       <div class="item">
         <img src="../../assets/skills/swift.svg" alt="">
@@ -45,40 +46,32 @@ export default {
 <style scoped>
 .skills {
   width: 100%;
-  /* display: grid; */
-  /* grid-auto-flow: row; */
-  /* grid-auto-columns: 1fr 1fr 1fr; */
-  /* grid-template-columns: 50px 50px; */
-  /* grid-auto-flow: column; */
-  /* grid-template-rows: repeat(3, 1fr); */
-  /* column-gap: 10%; */
-  
-  height: 70vh;
-  
+  /* height: 70vh; */
 }
 
-/* .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: space-around;
-} */
+.skills h5 {
+  font-style: italic;
+  font-size: large;
+  color: #4B9E70;
+  margin-top: 50px;
+}
 
 .grid {
   display: flex;
   flex-wrap: wrap;
   /* flex-direction: row; */
   /* background-color: aquamarine; */
-  gap: 1rem;
+  /* gap: 2px; */
   justify-content: space-evenly;
 }
 
 .item img {
-  width: 100px;
+  width: 60px;
   height: auto;
   /* background-color: bisque; */
 }
 
 .item {
-  padding: 70px;
+  padding: 70px 0;
 }
 </style>
