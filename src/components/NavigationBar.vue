@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <!-- <header>
     <nav id="nav">
       <ul>
         <a href="/">
@@ -33,6 +33,32 @@
         </a>
       </ul>
     </nav>
+  </header> -->
+  <header>
+    <nav id="nav">
+      <ul>
+        <a href="/">
+          shania.shn
+        </a>
+      </ul>
+      
+      <ul class="menus hide">
+        
+        <a href="#portfolio">
+          <li>projects</li>
+        </a>
+        <a href="#about">
+          <li>about</li>
+        </a>
+        <a href="https://read.cv/shaniashn" target="_blank">
+          <li>resume</li>
+        </a>
+      </ul>
+      <div class="button-menu">
+          <font-awesome-icon class="hide" icon="fa-solid fa-xmark" size="2x" @click="toggleMenu"/>
+        <font-awesome-icon  icon="fa-solid fa-bars" size="2x" class="" @click="toggleMenu"/>
+      </div>
+    </nav>
   </header>
 </template>
 
@@ -47,36 +73,48 @@ export default {
   },
   methods: {
     toggleMenu() {
+      console.log('Showmenu', this.showMenu);
+      
       return this.showMenu = !this.showMenu
     },
     start(){
       this.isMobile = document.body.clientWidth <= 768 ? true : false
     }
   },
-  watch: {
-    showMenu(newValue, oldValue){
-      const menuBar = document.querySelector('.menus-nav');
+  // watch: {
+  //   showMenu(newValue, oldValue){
+  //     const menuBar = document.querySelector('.menus-nav');
       
-      if(newValue) {
-        console.log("newval", newValue);
+  //     if(newValue) {
+  //       console.log("newval", newValue);
         
-        menuBar.classList.add('mobile');
-        // document.querySelector(".menus").style.display = "none"
-      }
-      else if(oldValue){
-        console.log("close");
-        menuBar.classList.remove('mobile');
-      }
-    },
-    isMobile(newValue){
-      if (newValue) {
-        document.querySelector(".menus").style.display = "none"
-        // this.showMenu = true
-      }
+  //       menuBar.classList.add('mobile');
+  //       // document.querySelector(".menus").style.display = "none"
+  //     }
+  //     else if(oldValue){
+  //       console.log("close");
+  //       menuBar.classList.remove('mobile');
+  //     }
+  //   },
+  //   isMobile(newValue){
+  //     if (newValue) {
+  //       document.querySelector(".menus").style.display = "none"
+  //     }
+  //   }
+  // },
+  watch: {
+    showMenu(){
+      document.querySelector(".menus").classList.toggle('hide')
+      // if (newValue) {
+        document.querySelector(".button-menu").querySelector('svg:first-child').classList.toggle("hide"); 
+      // }
+      // else if(oldValue) {
+        document.querySelector(".button-menu").querySelector('svg:last-child').classList.toggle("hide"); 
+      // }
     }
   },
   mounted() {
-    this.start()
+    // this.start()
   }
 }
 </script>
@@ -142,12 +180,12 @@ nav ul:first-child {
   left: 10%;
 }
 
-nav ul:last-child {
+nav ul:last-of-type{ 
   width: 30%;
   right: 10%;
 }
 
-nav ul:last-child svg {
+nav ul:last-of-type svg {
   display: none;
 }
 
@@ -165,7 +203,7 @@ nav ul:last-child svg {
   padding: 2%;
 }
 
-@media screen and (max-width: 769px) {
+/* @media screen and (max-width: 769px) {
 
   nav ul:last-child {
     width: 100%;
@@ -190,5 +228,44 @@ nav ul:last-child svg {
   nav ul:last-child svg:first-child {
     padding: 0;
   }
+} */
+
+/* // */
+
+.button-menu {
+  display: none;
+}
+
+.button-menu svg:first-child.hide {
+    display: none;
+}
+
+.button-menu svg:last-child.hide {
+    display: none;
+}
+
+@media screen and (max-width: 769px) {
+  nav ul:last-of-type {
+    width: 100%;
+    right: 0%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--lightgreen-color);
+    height: max-content;
+  }
+
+  nav ul:last-of-type.hide {
+    display: none;
+  }
+
+  .button-menu {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    position: relative;
+  }
+
+  
 }
 </style>

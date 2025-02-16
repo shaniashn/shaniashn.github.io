@@ -139,7 +139,7 @@ export default {
   .abt-img img:last-child{
     max-width: 100%;
     padding: 10% 0;
-    position: absolute;
+    /* position: absolute; */
     left: 0;
     right: 0;
   } 
