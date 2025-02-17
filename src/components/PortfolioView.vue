@@ -240,20 +240,6 @@ export default {
   width: 35pt;
 }
 
-/* .arrows {
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  left: 50px;
-  right: 50px;
-} */
-
-/* .arrows {
-  display: grid;
-  justify-content: space-between;
-  width: 100%;
-} */
-
 .arrows svg {
   width: 25px;
   height: 25px;
@@ -291,6 +277,11 @@ export default {
   .detail-view {
     padding: 5% 11%;
     flex-direction: column;
+  }
+
+  .arrows svg {
+    color:rgb(38, 37, 36);
+    background: none;
   }
 }
 
