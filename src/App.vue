@@ -24,9 +24,7 @@ export default {
   --blue-color: #79C4E2;
   --lightgreen-shade-color: rgb(213, 240, 193, 0.5);
   --lightgreen-mobile-menu: rgb(232, 243, 218, 0.9);
-
   scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
 }
 
 body {

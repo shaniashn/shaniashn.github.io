@@ -1,9 +1,9 @@
 <template>
-  <WelcomeView />
-  <PortfolioView />
-  <AboutPage />
-  <FooterView />
-  <Nav />
+    <WelcomeView />
+    <PortfolioView />
+    <AboutPage />
+    <FooterView />
+    <Nav/>
 </template>
 
 <script>
@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style>
-.section {
+section {
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
