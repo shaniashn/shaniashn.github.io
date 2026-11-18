@@ -1,5 +1,6 @@
 .DS_Store
 node_modules
+dist
 
 # local env files
 .env.local
@@ -20,3 +21,6 @@ pnpm-debug.log*
 *.sln
 *.sw?
 node_modules
+
+# Learning notes
+learning-notes/

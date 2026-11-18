@@ -3,11 +3,11 @@
     <PortfolioView />
     <AboutPage />
     <FooterView />
-    <Nav/>
+    <NavigationBar/>
 </template>
 
 <script>
-import Nav from './NavigationBar.vue';
+import NavigationBar from './NavigationBar.vue';
 import PortfolioView from './PortfolioView.vue';
 import AboutPage from './AboutPage.vue';
 import WelcomeView from './WelcomeView.vue';
@@ -16,7 +16,7 @@ import FooterView from './FooterView.vue';
 export default {
   name: 'HomePage',
   components: {
-    Nav,
+    NavigationBar,
     PortfolioView,
     AboutPage,
     WelcomeView,

@@ -2,44 +2,38 @@
   <section class="portfolio" id="portfolio">
     <div class="portfolio-bar">
       <ul>
-        <li v-for="(category, index) in categories" :key="index" @click="selectedItem(index)">{{ category }}</li>
+        <li v-for="(category, index) in categories" :key="index" @click="goTo(index)">{{ category }}</li>
       </ul>
     </div>
+
     <div class="detail-container">
       <div class="arrows">
-        <font-awesome-icon @click="setViewLeft" icon="fa-solid fa-arrow-left" />
+        <font-awesome-icon @click="goTo(index - 1)" icon="fa-solid fa-arrow-left" />
       </div>
       <div class="detail-view">
         
         <div class="detail-image">
-           <img :src=portoImg alt="" :style="{border: borderColors}">
+           <img :src="current.img" :alt="current.title" :style="{border: borderColors}">
         </div>
         <div class="detail-description">
           <div class="detail-title">
-            <p class="type">{{ portoType }}</p>
-            <p class="title">{{ portoTitle }}</p>
+            <p class="type">{{ current.type }}</p>
+            <p class="title">{{ current.title }}</p>
           </div>
           <div class="detail-desc">
-            <p class="description">{{ portoDesc }}</p>
+            <p class="description">{{ current.description }}</p>
           <div class="techused">
             <img src="../assets/techstack/swift.svg" alt="">
           </div>
           </div>
         </div>
-        <!-- <div class="arrows">
-        <font-awesome-icon @click="setViewLeft" icon="fa-solid fa-arrow-left" />
-          <font-awesome-icon @click="setViewRight" icon="fa-solid fa-arrow-right" />
-        </div> -->
       </div>
       <div class="arrows">
-          <font-awesome-icon @click="setViewRight" icon="fa-solid fa-arrow-right" />
+          <font-awesome-icon @click="goTo(index + 1)" icon="fa-solid fa-arrow-right" />
         </div>
     </div>
-    <!-- <div class="arrows">
-        <font-awesome-icon @click="setViewLeft" icon="fa-solid fa-arrow-left" />
-          <font-awesome-icon @click="setViewRight" icon="fa-solid fa-arrow-right" />
-        </div> -->
   </section>
+
 </template>
 
 <script>
@@ -83,59 +77,33 @@ export default {
           techStack: ""
         },
       ],
-      index: '-1',
-      portoTitle: '',
-      portoType: '',
-      portoDesc: '',
-      portoImg: riotImg,
+      // The only piece of "which project is showing" state.
+      index: 0,
       borderColors: ''
-
     }
+  },
+  computed: {
+    // Always derived from `index`, so the screen can't drift out of sync.
+    current() {
+      console.log('current re-ran, index =', this.portfolio[this.index]);
+      return this.portfolio[this.index];
+    }
+  },
+  created() {
+    this.changeBorderColor();
   },
   methods: {
-    changeBorderColor(){
-      let colors = ["#ABD9BB", "#E6A4B4", "#79C4E2"]
-      let randomNum = Math.floor(Math.random() * 3);
-      console.log("random ", randomNum);
-      
-      this.borderColors = `5px solid ${colors[randomNum]}`
+    changeBorderColor() {
+      const colors = ["#ABD9BB", "#E6A4B4", "#79C4E2"];
+      const randomNum = Math.floor(Math.random() * colors.length);
+      this.borderColors = `5px solid ${colors[randomNum]}`;
     },
-    setViewRight(){
-      if (this.index == this.portfolio.length-1) this.index = 0;
-      else {
-        this.index++;
-      }
-
-      this.portoTitle = this.portfolio[this.index].title;
-      this.portoType = this.portfolio[this.index].type;
-      this.portoImg = this.portfolio[this.index].img;
-      this.portoDesc = this.portfolio[this.index].description;
-      this.changeBorderColor()
-    },
-    setViewLeft(){
-      console.log("left", this.index);
-      
-      let selected = Math.abs((3 + this.index) % this.portfolio.length);
-      this.index = selected;
-      console.log("selected ", selected);
-      
-      this.portoTitle = this.portfolio[selected].title;
-      this.portoType = this.portfolio[selected].type;
-      this.portoImg = this.portfolio[selected].img;
-      this.portoDesc = this.portfolio[selected].description;
-      this.changeBorderColor()
-    },
-    selectedItem(index){
-      this.portoTitle = this.portfolio[index].title;
-      this.portoType = this.portfolio[index].type;
-      this.portoImg = this.portfolio[index].img;
-      this.portoDesc = this.portfolio[index].description;
+    // Go to any index; wraps around in both directions for any number of projects.
+    goTo(newIndex) {
+      const len = this.portfolio.length;
+      this.index = (newIndex + len) % len;
+      this.changeBorderColor();
     }
-  },
-  mounted() {
-    this.setViewRight();
-    this.changeBorderColor();
-    // console.log(this.index);
   }
 }
 </script>
