@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>© 2024 Sha Nia Siahaan. All rights reserved.</p>
+    <p>© {{ new Date().getFullYear }} Sha Nia Siahaan. All rights reserved.</p>
   </footer>
 </template>
 

@@ -7,21 +7,20 @@
         </a>
       </ul>
 
-      <ul class="menus hide">
-
-        <a href="#portfolio">
-          <li>projects</li>
-        </a>
-        <a href="#about">
-          <li>about</li>
-        </a>
-        <a href="https://read.cv/shaniashn" target="_blank">
-          <li>resume</li>
-        </a>
+      <ul :class="{ 'hide': !showMenu }">
+        <li>
+          <a href="#portfolio" @click="showMenu = false">projects</a>
+        </li>
+        <li>
+          <a href="#about" @click="showMenu = false">about</a>
+        </li>
+        <li>
+          <a href="https://read.cv/shaniashn" target="_blank" @click="showMenu = false">resume</a>
+        </li>
       </ul>
       <div class="button-menu">
-        <font-awesome-icon class="hide" icon="fa-solid fa-xmark" size="2x" @click="toggleMenu" />
-        <font-awesome-icon icon="fa-solid fa-bars" size="2x" class="" @click="toggleMenu" />
+        <font-awesome-icon :class="{ hide: !showMenu }" icon="fa-solid fa-xmark" size="2x" @click="toggleMenu" />
+        <font-awesome-icon icon="fa-solid fa-bars" size="2x" :class="{ hide: showMenu }" @click="toggleMenu" />
       </div>
     </nav>
   </header>
@@ -37,18 +36,9 @@ export default {
   },
   methods: {
     toggleMenu() {
-      console.log('Showmenu', this.showMenu);
-
       return this.showMenu = !this.showMenu
     },
-  },
-  watch: {
-    showMenu() {
-      document.querySelector(".menus").classList.toggle('hide')
-      document.querySelector(".button-menu").querySelector('svg:first-child').classList.toggle("hide");
-      document.querySelector(".button-menu").querySelector('svg:last-child').classList.toggle("hide");
-    }
-  },
+  }
 }
 </script>
 
@@ -110,7 +100,7 @@ nav ul li a {
 }
 
 nav ul:first-child {
-  left: 10%;
+  left: 4%;
 }
 
 nav ul:last-of-type {
@@ -142,7 +132,7 @@ nav ul:last-of-type svg {
     justify-content: space-evenly;
     align-items: center;
     background-color: var(--lightgreen-mobile-menu);
-    height: max-content;
+    height: 200px;
   }
 
   nav ul:last-of-type.hide {
@@ -159,7 +149,7 @@ nav ul:last-of-type svg {
     display: flex;
     justify-content: end;
     position: relative;
-    padding: 3%;
+    padding: 10px;
   }
 }
 </style>
